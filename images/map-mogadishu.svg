@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-label="Bản đồ minh hoạ khu vực Mogadishu, Somalia">
+  <title>Bản đồ minh hoạ khu vực Mogadishu - Hoa Kỳ, Somalia</title>
+  <desc>Sơ đồ tĩnh thể hiện khu vực thành phố Mogadishu, vị trí tọa độ 2.0469 độ Bắc, 45.3182 độ Đông, nơi diễn ra Chiến dịch Gothic Serpent năm 1993 - bối cảnh của chiến dịch Black Hawk Down.</desc>
+
+  <defs>
+    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16323f"/>
+      <stop offset="100%" stop-color="#0d1a21"/>
+    </linearGradient>
+    <linearGradient id="landGrad" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#232b30"/>
+      <stop offset="100%" stop-color="#1a2024"/>
+    </linearGradient>
+    <radialGradient id="pinGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f2a900" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f2a900" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mapGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <pattern id="seaWaves" width="46" height="18" patternUnits="userSpaceOnUse">
+      <path d="M0 12 q11.5 -9 23 0 t23 0" fill="none" stroke="#5f93a6" stroke-opacity="0.22" stroke-width="1.6"/>
+    </pattern>
+  </defs>
+
+  <!-- nen dat -->
+  <rect width="900" height="560" fill="url(#landGrad)"/>
+  <rect width="900" height="560" fill="url(#mapGrid)"/>
+
+  <!-- duong dai va duong nho (grid moi) -->
+  <g stroke="#59666e" stroke-width="2.5" stroke-opacity="0.75">
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="210" x2="900" y2="210"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="390" x2="900" y2="390"/>
+    <line x1="140" y1="0" x2="140" y2="470"/>
+    <line x1="330" y1="0" x2="330" y2="470"/>
+    <line x1="520" y1="0" x2="520" y2="470"/>
+    <line x1="700" y1="0" x2="700" y2="470"/>
+  </g>
+
+  <!-- cac o pho lon (block) -->
+  <g fill="#2c353b" fill-opacity="0.85">
+    <rect x="30" y="35" width="90" height="60" rx="4"/>
+    <rect x="170" y="30" width="130" height="70" rx="4"/>
+    <rect x="360" y="30" width="120" height="70" rx="4"/>
+    <rect x="540" y="40" width="130" height="55" rx="4"/>
+    <rect x="730" y="30" width="130" height="70" rx="4"/>
+    <rect x="30" y="145" width="80" height="50" rx="4"/>
+    <rect x="180" y="150" width="110" height="45" rx="4"/>
+    <rect x="360" y="145" width="130" height="50" rx="4"/>
+    <rect x="550" y="150" width="110" height="45" rx="4"/>
+    <rect x="740" y="150" width="120" height="45" rx="4"/>
+    <rect x="40" y="240" width="70" height="45" rx="4"/>
+    <rect x="185" y="240" width="110" height="45" rx="4"/>
+    <rect x="545" y="240" width="115" height="45" rx="4"/>
+    <rect x="745" y="240" width="110" height="45" rx="4"/>
+    <rect x="35" y="330" width="85" height="45" rx="4"/>
+    <rect x="180" y="330" width="110" height="45" rx="4"/>
+    <rect x="360" y="330" width="125" height="45" rx="4"/>
+    <rect x="545" y="330" width="110" height="45" rx="4"/>
+    <rect x="740" y="330" width="115" height="45" rx="4"/>
+  </g>
+
+  <!-- duong chinh -->
+  <g stroke="#8b9aa3" stroke-opacity="0.9" stroke-width="7" stroke-linecap="round">
+    <line x1="0" y1="255" x2="900" y2="255"/>
+    <line x1="455" y1="0" x2="455" y2="478"/>
+  </g>
+  <g stroke="#f2a900" stroke-opacity="0.28" stroke-width="13" stroke-linecap="round">
+    <line x1="0" y1="255" x2="900" y2="255"/>
+    <line x1="455" y1="0" x2="455" y2="478"/>
+  </g>
+
+  <!-- bien -->
+  <path d="M0 470 q110 26 220 6 t230 8 t230 -10 t220 4 V560 H0 Z" fill="url(#seaGrad)"/>
+  <path d="M0 470 q110 26 220 6 t230 8 t230 -10 t220 4 V560 H0 Z" fill="url(#seaWaves)"/>
+  <path d="M0 470 q110 26 220 6 t230 8 t230 -10 t220 4" fill="none" stroke="#5f93a6" stroke-opacity="0.65" stroke-width="2.5"/>
+
+  <!-- vong sang tai vi tri -->
+  <circle cx="455" cy="255" r="86" fill="url(#pinGlow)"/>
+  <circle cx="455" cy="255" r="62" fill="none" stroke="#f2a900" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 10"/>
+
+  <!-- ghim dia ly -->
+  <g transform="translate(455 255)">
+    <path d="M0 6 C-20 -20 -30 -32 -30 -48 a30 30 0 1 1 60 0 C30 -32 20 -20 0 6 Z" fill="#f2a900" stroke="#0b0e10" stroke-width="3"/>
+    <circle cx="0" cy="-48" r="11" fill="#0b0e10"/>
+  </g>
+
+  <!-- nhan -->
+  <g font-family="Consolas, 'Courier New', monospace" fill="#e8ecef">
+    <text x="480" y="243" font-size="24" letter-spacing="3" font-weight="bold">MOGADISHU</text>
+    <text x="480" y="266" font-size="14" fill="#a9b6bf" letter-spacing="1">2.0469 N, 45.3182 E</text>
+    <text x="760" y="530" font-size="14" fill="#5f93a6" letter-spacing="2">INDIAN OCEAN</text>
+    <text x="20" y="42" font-size="13" fill="#7d8f3a" letter-spacing="2">SOMALIA</text>
+  </g>
+
+  <!-- huong bac -->
+  <g transform="translate(70 400)" font-family="Consolas, 'Courier New', monospace">
+    <path d="M0 44 L16 6 L32 44 L16 34 Z" fill="#e8ecef" fill-opacity="0.85"/>
+    <text x="16" y="62" font-size="14" text-anchor="middle" fill="#e8ecef" fill-opacity="0.85">N</text>
+  </g>
+
+  <!-- thanh ty le -->
+  <g transform="translate(640 500)" font-family="Consolas, 'Courier New', monospace">
+    <rect x="0" y="0" width="90" height="8" fill="#e8ecef" fill-opacity="0.8"/>
+    <rect x="90" y="0" width="90" height="8" fill="#0b0e10" stroke="#e8ecef" stroke-opacity="0.8"/>
+    <text x="0" y="26" font-size="12" fill="#a9b6bf">0</text>
+    <text x="90" y="26" font-size="12" fill="#a9b6bf" text-anchor="middle">5 km</text>
+    <text x="180" y="26" font-size="12" fill="#a9b6bf" text-anchor="end">10 km</text>
+  </g>
+
+  <!-- khung goc -->
+  <g fill="none" stroke="#7d8f3a" stroke-opacity="0.8" stroke-width="3">
+    <path d="M20 60 V20 H60"/>
+    <path d="M880 60 V20 H840"/>
+    <path d="M20 500 V540 H60"/>
+    <path d="M880 500 V540 H840"/>
+  </g>
+</svg>

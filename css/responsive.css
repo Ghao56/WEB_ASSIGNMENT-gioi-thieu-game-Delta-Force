@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* ===================================================================
+   DELTA FORCE - FAN SITE
+   File CSS đáp ứng (Y4: media queries - mobile first)
+   Breakpoint: 992px / 768px / 480px
+   Ưu tiên: không có thanh cuộn ngang trên mọi kích thước màn hình.
+   =================================================================== */
+
+
+/* ---------- MÀN HÌNH LỚN HƠN 992px ---------- */
+/* (Nội dung mặc định trong style.css đã là bố cục nhiều cột) */
+
+
+/* ---------- MÀN HÌNH <= 992px: máy tính bảng ---------- */
+@media (max-width: 992px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+    /* Hero bớt cao để nhìn thấy nội dung ngay */
+    .hero__banner {
+        min-height: 600px;
+    }
+
+    .hero__content {
+        padding: 170px 0 120px;
+    }
+
+    /* Giới thiệu và liên hệ: 2 cột -> 1 cột xếp dọc */
+    .about__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about__value {
+        text-align: left;
+    }
+
+    .contact__inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    /* Lớp nhân vật: 4 cột -> 2 cột */
+    .classes__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Chế độ chơi: 3 cột -> 2 cột (đọc dễ hơn trên máy tính bảng) */
+    .modes__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Thư viện: 3 cột -> 2 cột */
+    .gallery__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lightbox__nav {
+        padding: 10px 16px;
+        font-size: .8rem;
+    }
+}
+
+
+/* ---------- MÀN HÌNH <= 768px: máy tính bảng dọc / tablet ---------- */
+@media (max-width: 768px) {
+
+    .container {
+        width: min(1200px, 100% - 32px);
+    }
+
+    .section {
+        padding: 66px 0;
+    }
+
+    .hero__banner {
+        min-height: 540px;
+    }
+
+    .hero__content {
+        padding: 150px 0 110px;
+    }
+
+    .hero__title {
+        letter-spacing: .1em;
+    }
+
+    /* Tính năng: 4 cột -> 1 cột */
+    .features__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* Cột nổi bật không còn dịch lên nữa */
+    .features__item--highlight,
+    .features__item--highlight:hover {
+        transform: none;
+    }
+
+    /* Chế độ chơi: 3 cột -> 1 cột */
+    .modes__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Lớp nhân vật: 2 cột -> 1 cột */
+    .classes__list {
+        grid-template-columns: 1fr;
+    }
+
+    .class-card__media {
+        aspect-ratio: 16 / 10;
+    }
+
+    /* Thư viện: 2 cột -> 1 cột */
+    .gallery__list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__form-wrap {
+        padding: 24px 20px;
+    }
+
+    /* Nút trước / sau của lightbox chuyển xuống dưới ảnh */
+    .lightbox {
+        padding: 64px 16px 96px;
+    }
+
+    .lightbox__nav {
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
+}
+
+
+/* ---------- MÀN HÌNH <= 480px: điện thoại ---------- */
+@media (max-width: 480px) {
+
+    body {
+        font-size: .96rem;
+    }
+
+    .container {
+        width: min(1200px, 100% - 24px);
+    }
+
+    .section {
+        padding: 54px 0;
+    }
+
+    .btn {
+        padding: 13px 26px;
+        font-size: .9rem;
+        letter-spacing: .16em;
+        outline-offset: 3px;
+    }
+
+    .nav-toggle {
+        top: 14px;
+        left: 14px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .site-nav {
+        width: 100%;
+        padding: 84px 20px 24px;
+    }
+
+    .hero__banner {
+        min-height: 500px;
+    }
+
+    .hero__content {
+        padding: 132px 0 100px;
+    }
+
+    .hero__title {
+        font-size: clamp(2.2rem, 13vw, 3.4rem);
+        letter-spacing: .06em;
+    }
+
+    .hero__desc {
+        font-size: .95rem;
+    }
+
+    /* Ẩn nút mũi tên trên điện thoại, dùng 3 chấm để chuyển slide */
+    .hero__arrow {
+        display: none;
+    }
+
+    .hero__dot {
+        width: 26px;
+    }
+
+    #s1:checked~.hero__dots .hero__dot--1,
+    #s2:checked~.hero__dots .hero__dot--2,
+    #s3:checked~.hero__dots .hero__dot--3 {
+        width: 40px;
+    }
+
+    .about__accent {
+        width: 70%;
+        margin-left: 4%;
+    }
+
+    .about__item {
+        flex-direction: column;
+    }
+
+    .contact__item {
+        padding: 16px;
+    }
+
+    .social {
+        gap: 10px;
+    }
+
+    .social__link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lightbox__close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+        font-size: 2rem;
+    }
+
+    .lightbox__nav {
+        padding: 9px 14px;
+        font-size: .74rem;
+    }
+}
