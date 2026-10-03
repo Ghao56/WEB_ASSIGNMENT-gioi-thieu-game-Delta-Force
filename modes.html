@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Chi tiết ba chế độ chơi của Delta Force:Chiến Trường (Warfare) Chiến Dịch / Rút Quân và chiến dịch Black Hawk Down, kèm bảng so sánh.">
+content="Chi tiết ba chế độ chơi của Delta Force: Chiến Trường (Warfare), Chiến Dịch / Rút Quân (Operations) và chiến dịch Black Hawk Down, kèm bảng so sánh.">
     <meta name="author" content="Sinh viên - Học phần Lập trình Web cơ bản">
-    <meta name="theme-color" content="#0b0e10">
-    <title>Chế độ chơi | Delta Force - Fan-made</title>
+    <meta name="theme-color" content="#0c1011">
+    <title>Chế độ chơi | Delta Force (fan-made)</title>
 
     <!-- Y1: CSS ngoài (dùng chung với trang chủ) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +24,20 @@
         .page-head {
             padding: 190px 0 70px;
             background:
-                linear-gradient(rgba(11, 14, 16, .82), rgba(11, 14, 16, .92)),
+                linear-gradient(rgba(12, 16, 17, .84), rgba(12, 16, 17, .94)),
+                linear-gradient(rgba(242, 169, 0, .05) 1px, transparent 1px) 0 0 / 48px 48px,
+                linear-gradient(90deg, rgba(242, 169, 0, .05) 1px, transparent 1px) 0 0 / 48px 48px,
                 url("images/hero-2.svg") center / cover no-repeat;
             text-align: center;
         }
 
         .page-head__title {
             margin: 8px 0 14px;
-            font-size: clamp(2.2rem, 6vw, 3.6rem);
+            font-family: var(--font-stencil);
+            font-size: clamp(2rem, 5.4vw, 3.4rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: .04em;
         }
 
         .page-head__text {
@@ -103,8 +109,8 @@
             position: sticky;
             top: 0;
             z-index: 40;
-            background: rgba(11, 14, 16, .96);
-            border-bottom: 1px solid var(--line);
+            background: rgba(12, 16, 17, .96);
+            border-bottom: 2px solid var(--olive);
         }
 
         .jump-nav__list {
@@ -119,16 +125,18 @@
 
         .jump-nav__link {
             font-family: var(--font-head);
-            font-size: .95rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            letter-spacing: .12em;
-            text-transform: uppercase;
+            letter-spacing: .08em;
             color: var(--text-muted);
+            border-bottom: 2px solid transparent;
+            transition: color var(--t-fast), border-color var(--t-fast);
         }
 
         .jump-nav__link:hover,
         .jump-nav__link:focus-visible {
             color: var(--accent);
+            border-bottom-color: var(--accent);
         }
 
         /* Y3: float + clearfix - ảnh chạy bên cạnh văn bản */
@@ -144,7 +152,8 @@
             max-width: 100%;
             height: auto;
             margin: 10px 20px 20px 10px;
-            border-radius: 15px;
+            border-radius: var(--radius);
+            border-bottom: 4px solid var(--olive);
             box-shadow: var(--shadow);
         }
 
@@ -156,12 +165,19 @@
             align-items: start;
         }
 
+        .mode-detail__aside {
+            padding: 24px 22px;
+            background: var(--bg-dark);
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--accent);
+        }
+
         .mode-detail__aside-title {
             margin: 0 0 6px;
             font-family: var(--font-head);
-            font-size: 1.4rem;
-            letter-spacing: .06em;
-            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: .04em;
+            color: var(--text);
         }
 
         /* Danh sách luật chơi */
@@ -175,9 +191,10 @@
 
         .rule-list__item {
             position: relative;
-            padding: 12px 16px 12px 42px;
+            padding: 12px 16px 12px 22px;
             background: var(--panel-2);
             border: 1px solid var(--line);
+            border-left: 3px solid var(--olive);
             border-radius: 10px;
             color: white; /* thêm dòng này để chữ nội dung thành màu trắng */
         }
@@ -198,11 +215,11 @@
         .rule-list__name {
             display: block;
             font-family: var(--font-head);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            letter-spacing: .06em;
+            letter-spacing: .04em;
             text-transform: uppercase;
-            color: green; /* đổi từ vàng sang xanh lá */
+            color: var(--accent);
         }
 
         /* Bảng so sánh - cho phép cuộn ngang trên màn hình nhỏ */
@@ -216,23 +233,22 @@
             overflow-x: auto;
             background: rgba(11, 14, 16, 0.648);
             border: 1px solid var(--line);
-            border-radius: 16px;
+            border-radius: var(--radius);
         }
 
         .compare-table {
             width: 100%;
             min-width: 720px;
             border-collapse: collapse;
-            font-size: .95rem;
+            font-size: 1rem;
         }
 
         .compare-table caption {
             padding: 18px 20px;
             font-family: var(--font-head);
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
+            letter-spacing: .04em;
             text-align: left;
             color: var(--accent);
         }
@@ -247,16 +263,22 @@
         .compare-table thead th {
             background: var(--panel-2);
             font-family: var(--font-head);
-            font-size: .9rem;
-            letter-spacing: .1em;
-            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .06em;
             color: var(--text);
             white-space: nowrap;
+            border-bottom: 2px solid var(--olive);
+        }
+
+        .compare-table tbody th {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            color: var(--paper);
         }
 
         /* Y2: sọc kẻ xen kẽ bằng :nth-child - không dùng !important */
         .compare-table tbody tr:nth-child(odd) {
-            background: rgba(255, 255, 255, .02);
+            background: rgba(255, 255, 255, .03);
         }
 
         /* Y2: hover đổi nền hàng */
@@ -264,6 +286,7 @@
             background: rgba(242, 169, 0, .12);
         }
 
+        .compare-table tbody tr:last-child th,
         .compare-table tbody tr:last-child td {
             border-bottom: 0;
         }
@@ -318,12 +341,13 @@
 
         .table-hint {
             margin: 14px 0 0;
-            font-size: .88rem;
+            padding-left: 14px;
+            font-size: .92rem;
             color: var(--text-muted);
         }
 
         .back-home {
-            margin-top: 60px;
+            margin: 60px auto;
         }
 
         /* Đường kẻ nhấn mạnh cho dòng lưu ý */
@@ -376,13 +400,10 @@
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html">Trang chủ</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html#tinh-nang">Tính năng</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html#gioi-thieu">Giới thiệu</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="index.html#lop-nhan-vat">Lớp
-                        nhân vật</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html#lop-nhan-vat">Class nhân vật</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#che-do-1">Chế độ chơi</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="index.html#thu-vien">Thư
-                        viện</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="index.html#lien-he">Liên hệ</a>
-                </li>
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html#thu-vien">Thư viện</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html#lien-he">Liên hệ</a></li>
             </ul>
         </nav>
 
@@ -395,11 +416,9 @@
         <section class="page-head">
             <div class="container">
                 <p class="hero__kicker">Chế độ chơi</p>
-                <h1 class="page-head__title">Ba chế độ, ba phong cách chiến đấu</h1>
+                <h1 class="page-head__title">Ba chế độ, ba cách chiến đấu</h1>
                 <p class="page-head__text">
-                    Delta Force không chỉ là một chế độ bắn súng. Mỗi chế độ dưới đây đòi hỏi
-                    những kỹ năng chiến thuật khác nhau:Chiến Trường (Warfare) trận chiến
-                    Chiến Dịch / Rút Quân và chiến dịch hợp tác.
+                    Delta Force không chỉ có một kiểu trận đấu. Mỗi chế độ đòi hỏi kỹ năng chiến thuật khác nhau: Chiến Trường (Warfare) giao tranh quy mô lớn, Chiến Dịch / Rút Quân (Operations) thu thập rồi rút lui, và chiến dịch hợp tác.
                 </p>
                 <div class="mode-preview-list" aria-label="Ba chế độ chơi">
                     <a class="mode-preview" href="#che-do-1">
@@ -425,8 +444,8 @@
         <nav class="jump-nav" aria-label="Điều hướng nhanh">
             <div class="container">
                 <ul class="jump-nav__list">
-                    <li><a class="jump-nav__link" href="#che-do-1">Chiến Trường (Warfare)</a></li>
-                    <li><a class="jump-nav__link" href="#che-do-2">Chiến Dịch / Rút Quân</a></li>
+<li><a class="jump-nav__link" href="#che-do-1">Chiến Trường (Warfare)</a></li>
+                    <li><a class="jump-nav__link" href="#che-do-2">Chiến Dịch / Rút Quân (Operations)</a></li>
                     <li><a class="jump-nav__link" href="#che-do-3">Black Hawk Down</a></li>
                     <li><a class="jump-nav__link" href="#bang-so-sanh">Bảng so sánh</a></li>
                 </ul>
@@ -445,23 +464,22 @@
                 <div class="mode-detail__grid">
                     <!-- Y3: float + clearfix (ảnh chạy bên cạnh văn bản) -->
                     <div class="mode-detail__prose">
-                        <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315467/EA57E9C06701A7EF053900324DBE820E4A8C7F16/"
-                            alt="Ảnh minh họa chế độ chiến tranh Chiến Trường (Warfare)" width="900" height="600">
+<img class="mode-detail__float" src="https://cdn-media.sforum.vn/storage/app/media/quangduy/warfare-delta-force-gameplay-ava-1.jpg"
+                            alt="Ảnh minh họa chế độ Chiến Trường (Warfare)" width="900" height="600">
                         <p>
-                            Đây là chế độ dài nhất và cũng là điểm nhấn của Delta Force hiện nay.
-                            Hai đội đối đầu trên bản đồ trải rộng, gồm cả không gian đất, biển
-                            và không trung, với quy mô lên tới <strong>32 người chơi mỗi phe</strong>.
+                            Warfare là chế độ quy mô lớn và là điểm nhấn của Delta Force. Hai đội đối đầu trên
+                            bản đồ rộng gồm mặt đất, mặt nước và không trung, với
+                            <strong>32 người chơi mỗi phe</strong>.
                         </p>
                         <p>
-                            Bản đồ không chỉ có bộ binh: người chơi có thể gọi tiếp viện, sử dụng
-                            xe tăng, xe bọn, trực thăng Black Hawk và tàu đổ bộ để thay đổi
-                            mật độ trận đấu. Vì vậy, thuộc tính bản đồ, vị trí và thời tiết chiến
-                            là là những thứ sinh viên cần phân tích trước mỗi trận.
+                            Chiến trường không chỉ có bộ binh. Người chơi có thể dùng xe tăng, xe bọc thép,
+                            trực thăng Black Hawk và tàu tấn công để thay đổi cục diện. Vì vậy, địa hình, vị
+                            trí đặt phương tiện và nhịp tiếp viện là những điều cần tính trước mỗi trận.
                         </p>
                         <p>
-                            Chế độ này rất hợp với người chơi thích tranh chiến, muốn làm đội trưởng,
-                            xây dựng đội hình và trích danh. Người chơi thích chật, đánh bạn
-                            đông đều thường chọn <strong>Chiến Dịch / Rút Quân</strong> ở phía dưới.
+                            Chế độ này hợp với người thích giao tranh lớn, muốn phối hợp đội hình và giữ một
+                            vai trò rõ ràng trong đội. Nếu bạn thích nhịp chơi chậm hơn, nhiều rủi ro hơn,
+                            hãy xem <strong>Chiến Dịch / Rút Quân (Operations)</strong> ở phần tiếp theo.
                         </p>
                     </div>
 
@@ -469,23 +487,23 @@
                         <h3 class="mode-detail__aside-title">Luật chơi cơ bản</h3>
                         <ul class="rule-list">
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Tấn công / Phòng thủ (A/D)</span>
-                                Một bên tấn công, bên còn lại phòng thủ; đội thắng ở mục tiêu chung
-                                trước sẽ chiếm thắng.
+                                <span class="rule-list__name">Conquest</span>
+                                Hai đội tranh giành các điểm chiếm trên bản đồ; đội kiểm soát nhiều điểm hơn
+                                sẽ dẫn trước.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Chiếm đỉnh điểm</span>
-                                Chiếm giữ một khu vực, đội giữ vùng đấy lâu hơn sẽ cộng thêm
-                                điểm theo thời gian.
+                                <span class="rule-list__name">Breakthrough</span>
+                                Một bên tấn công, bên còn lại phòng thủ; bên tấn công phải lần lượt phá vỡ
+                                các tuyến mục tiêu.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Gọi tiếp viện</span>
-                                Giữ điểm cấp tương trợ và phát tân binh đưa họ vào cuộc tranh.
+                                <span class="rule-list__name">Hồi sinh đồng đội</span>
+                                Class Recon có thể đặt Respawn Beacon để đồng đội quay lại trận gần tuyến đầu.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Phương tiện cơ giác</span>
-                                Gắn tên phương tiện cấp cho cả đội: xe tăng, xe bọn, trực thăng và
-                                tàu đổ bộ.
+                                <span class="rule-list__name">Phương tiện chiến đấu</span>
+                                Xe tăng, xe bọc thép, trực thăng và tàu tấn công là lực lượng dùng chung
+                                của cả đội.
                             </li>
                         </ul>
                     </aside>
@@ -499,30 +517,29 @@
             <div class="container">
                 <header class="section-head">
                     <p class="section-head__script">Chế độ 02</p>
-                    <h2 class="section-head__title">Chiến Dịch / Rút Quân</h2>
+                    <h2 class="section-head__title">Chiến Dịch / Rút Quân (Operations)</h2>
                 </header>
 
                 <div class="mode-detail__grid">
                     <div class="mode-detail__prose">
-                        <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315459/F6B24A06DF701DD4F19282E71B63676A1080CA75/"
-                            alt="Ảnh minh họa chế độ Chiến Dịch / Rút Quân" width="900" height="600">
+<img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315459/F6B24A06DF701DD4F19282E71B63676A1080CA75/"
+                            alt="Ảnh minh họa chế độ Chiến Dịch / Rút Quân (Operations)" width="900" height="600">
                         <p>
-                            <strong>Chiến Dịch / Rút Quân</strong> là chế độ mang thiết bị vào bản đồ, tìm cửa,
-                            gom <strong>chiến lợi phẩm</strong> rồi <strong>rút ra an toàn</strong>.
-                            Nếu thua, mất hết trang bị hoặc chết, bạn mất hết phần thưởng
-                            thuộc về cuộc trận.
+                            <strong>Chiến Dịch / Rút Quân (Operations)</strong> là chế độ mang trang bị vào bản đồ, tìm kiếm và thu
+                            thập <strong>chiến lợi phẩm</strong> rồi <strong>rút ra an toàn</strong>. Nếu bị
+                            hạ gục hoặc không kịp rút, bạn có thể mất số trang bị và chiến lợi phẩm đã mang
+                            theo trong trận đó.
                         </p>
                         <p>
-                            Mỗi tiểu đội có <strong>3 người</strong>, dùng ba lớp nhân vật khác nhau
-                            để bù đắc nhau. Chế độ này kết hợp <strong>PvE</strong> (đối thủ nhỏ là
-                            máy bay hạng) và <strong>PvP</strong> (cả những đội khác trong vùng lấy),
-                            nên cả dưới đều phải đề phòng.
+                            Mỗi tiểu đội có <strong>3 người</strong>, thường chọn các class khác nhau để bù
+                            đắp điểm yếu cho nhau. Chế độ kết hợp <strong>PvE</strong> (đối thủ do máy điều
+                            khiển) và <strong>PvP</strong> (các đội khác trên cùng bản đồ), nên bạn phải đề
+                            phòng cả hai phía.
                         </p>
                         <p>
-                            Vì sao lại thú vị? Vì mỗi lần vào cuộc vớt là một lần phải suy nghĩ: nên đi
-                            đâu trước, nên tiết kiệm gì, nên rút về ở đâu. Với người chơi thích lập
-                            kế hoạch và chọn mặt đường thoái, đây là nơi ẩn sức sẽ chạm vào những
-                            người chơi khác.
+                            Điều làm Operations hấp dẫn là mỗi lượt vào bản đồ đều cần quyết định: đi hướng
+                            nào trước, mang theo gì, rút ở điểm nào. Chế độ này hợp với người thích lập kế
+                            hoạch và chấp nhận rủi ro để đổi lấy phần thưởng lớn.
                         </p>
                     </div>
 
@@ -530,20 +547,20 @@
                         <h3 class="mode-detail__aside-title">Vòng lặp chơi</h3>
                         <ul class="rule-list">
                             <li class="rule-list__item">
-                                <span class="rule-list__name">1. Trang bị vào</span>
-                                Chọn trang bị phù hợp trước khi hạ cánh vào vùng lấy.
+                                <span class="rule-list__name">1. Chuẩn bị</span>
+                                Chọn Operator và trang bị phù hợp trước khi vào bản đồ.
                             </li>
                             <li class="rule-list__item">
                                 <span class="rule-list__name">2. Thu thập</span>
-                                Hòm gồm vật phẩm, vũ khí và giá trị tăng của chiến lợi phẩm.
+                                Tìm vật phẩm, vũ khí và chiến lợi phẩm có giá trị.
                             </li>
                             <li class="rule-list__item">
                                 <span class="rule-list__name">3. Sống sót</span>
-                                Giúp đỡ, giải thếp và tránh truy đuổi trong suốt chuyến lấy.
+                                Tránh hoặc hạ đối thủ, giữ liên lạc với cả tiểu đội.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">4. Rút an toàn</span>
-                                Tìm điểm rút lui trước khi hết viện binh hoặc kéo theo cả đội.
+                                <span class="rule-list__name">4. Rút ra</span>
+                                Đến điểm rút trước khi trận kết thúc để giữ lại chiến lợi phẩm.
                             </li>
                         </ul>
                     </aside>
@@ -556,33 +573,29 @@
         <section class="section mode-detail" id="che-do-3">
             <div class="container">
                 <header class="section-head">
-                    <p class="section-head__script">Chế độ 03</p>
+                    <p class="section-head__script">Chế độ 3</p>
                     <h2 class="section-head__title">Black Hawk Down</h2>
                 </header>
 
                 <div class="mode-detail__grid">
                     <div class="mode-detail__prose">
-                        <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315483/44840183FD8B1D09D56E779687129DBF3821C746/"
-                            alt="Ảnh minh họa chiến dịch Black Hawk Down">
+<img class="mode-detail__float" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbE8ImMaecT4mOKAbBQJXv_4bAhdQpF8uWCnpL_nB8dlf5oZtA6El2E4eB&s=10"
+                            alt="Ảnh minh họa chiến dịch Black Hawk Down" width="900" height="600">
                         <p>
-                            Black Hawk Down là phần <strong>chiến dịch hợp tác</strong> cho tối
-                            đa <strong>4 người chơi</strong>, remake lại từ game cùng tên
-                            phát hành năm 2003. Chiến dịch được chia thành
-                            <strong>7 nhiệm vụ</strong> kể lại sự kiện ở Mogadishu năm 1993
+                            Black Hawk Down là <strong>chiến dịch hợp tác</strong> cho tối đa
+                            <strong>4 người chơi</strong>, làm lại từ tựa game cùng tên phát hành năm 2003.
+                            Chiến dịch gồm <strong>7 nhiệm vụ</strong> kể lại các sự kiện ở Mogadishu năm 1993
                             trong <strong>Chiến dịch Gothic Serpent</strong>.
                         </p>
                         <p>
-                            Mỗi người chơi chọn một vai trò chuyên môn riêng, ví dụ cấp âm,
-                            hỏa hoạn hay giám sát, và người chơi sẽ dựa vào đó để giúp phần
-                            việc chăm sóc đồng đội. Một cốt truyện mới liên quan tới tổ chức
-                            <strong>GTI (Global Threat Initiative)</strong> được thêm vào
-                            để làm nền cho cuộc phẫu nạn.
+                            Đây là chế độ chơi miễn phí, đi theo kịch bản có sẵn thay vì đối đầu với người
+                            chơi khác. Bạn cùng đồng đội hoàn thành từng nhiệm vụ, nên phối hợp và chọn trang
+                            bị phù hợp là yếu tố quyết định.
                         </p>
                         <p>
-                            Các phong cảnh nổi bật được xây dựng lại: phố Mogadishu, chiến đấu
-                            đường phố, nhiệm vụ ban đêm và khu vực sụp cõi. Đây là chế độ độc
-                            nhất trong ba chế độ vì nó có kịch bản định sẵn cho người chơi
-                            thích chiến thuật dồn dập.
+                            Bối cảnh gồm các con phố Mogadishu, giao tranh trong khu dân cư và những nhiệm vụ
+                            cần phối hợp sát sao. Chế độ này phù hợp với người thích cốt truyện và nhịp chơi
+                            dồn dập hơn là đấu xếp hạng.
                         </p>
                     </div>
 
@@ -591,19 +604,19 @@
                         <ul class="rule-list">
                             <li class="rule-list__item">
                                 <span class="rule-list__name">Số người chơi</span>
-                                Từ 1 đến 4 người, chơi cùng một chiến dịch.
+                                Từ 1 đến 4 người trong cùng một chiến dịch.
                             </li>
                             <li class="rule-list__item">
                                 <span class="rule-list__name">Số nhiệm vụ</span>
-                                7 nhiệm vụ kể lại chuỗi chiến dịch năm 1993.
+                                7 nhiệm vụ kể lại các sự kiện năm 1993.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Vai trò chuyên môn</span>
-                                Cấp âm, hỏa hoạn, giám sát &mdash; người chơi chia nhau việc.
+                                <span class="rule-list__name">Bối cảnh</span>
+                                Mogadishu, Somalia trong Chiến dịch Gothic Serpent.
                             </li>
                             <li class="rule-list__item">
-                                <span class="rule-list__name">Thời điểm ra mắt</span>
-                                Phát hành tháng 2 năm 2025, cộng thêm miễn phí.
+                                <span class="rule-list__name">Chi phí</span>
+                                Nội dung miễn phí, không cần mua thêm.
                             </li>
                         </ul>
                     </aside>
@@ -623,56 +636,41 @@
                 <!-- Y3: overflow-x để bảng không làm tràn trang khi màn hình nhỏ -->
                 <div class="table-wrap" tabindex="0" role="region" aria-label="Bảng so sánh các chế độ chơi">
                     <table class="compare-table">
-                        <caption>So sánh 4 chế độ chơi chính của Delta Force</caption>
+                        <caption>So sánh 3 chế độ chơi chính của Delta Force</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Chế độ</th>
                                 <th scope="col">Loại</th>
-                                <th scope="col">Số người chơi / lối</th>
+                                <th scope="col">Số người chơi</th>
                                 <th scope="col">Mục tiêu</th>
-                                <th scope="col">Hợp nhất</th>
+                                <th scope="col">Phù hợp với</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Chiến tranh Chiến Trường (Warfare)</td>
-                                <td>PvP liên đội</td>
+<th scope="row">Chiến Trường (Warfare)</th>
+                                <td>PvP quy mô lớn</td>
                                 <td>32 vs 32</td>
                                 <td>Chiếm và giữ mục tiêu</td>
-                                <td>Thích chiến trận, đội hình, phương tiện</td>
+                                <td>Người thích giao tranh lớn, phương tiện và phối hợp đội hình</td>
                             </tr>
                             <tr>
-                                <td>Chiến Dịch / Rút Quân</td>
-                                <td>PvPvE rút lui</td>
+<th scope="row">Chiến Dịch / Rút Quân (Operations)</th>
+                                <td>PvPvE, rút lui</td>
                                 <td>Tiểu đội 3 người</td>
-                                <td>Thu thập chiến lợi phẩm và rút an toàn</td>
-                                <td>Thích gây náp, tấn công, đổi đội</td>
+                                <td>Thu thập chiến lợi phẩm và rút ra an toàn</td>
+                                <td>Người thích lập kế hoạch và chấp nhận rủi ro</td>
                             </tr>
                             <tr>
-                                <td>Black Hawk Down</td>
+                                <th scope="row">Black Hawk Down</th>
                                 <td>Chiến dịch hợp tác</td>
                                 <td>1 &ndash; 4 người</td>
-                                <td>Hoàn thành 7 nhiệm vụ chiến dịch</td>
-                                <td>Thích chiến thuật dồn dập, có cốt truyện</td>
-                            </tr>
-                            <tr>
-                                <td>Hot Zone</td>
-                                <td>PvP ngắn, nhanh</td>
-                                <td>3 x 3 x 3</td>
-                                <td>Tiêu diệt hết đội địch hoặc tải lên MandelCell</td>
-                                <td>Thích trận đấu nhanh, ít vào đội</td>
+                                <td>Hoàn thành 7 nhiệm vụ</td>
+                                <td>Người thích cốt truyện và nhịp chơi dồn dập</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Y1: ví dụ INLINE CSS (thuộc tính style nằm trong thẻ HTML) -->
-                <p class="note table-hint" style="border-left-color: #7d8f3a;">
-                    <strong>Lưu ý:</strong> dòng này được định dạng bằng CSS nội tuyến
-                    (<code>style="..."</code>) để minh họa cách làm CSS nội tuyến trong thẻ. Các quy
-                    tắc khác của trang này nằm trong thẻ <code>style</code> ở trong
-                    <code>&lt;head&gt;</code>, phần còn lại dùng file CSS ngoài.
-                </p>
             </div>
         </section>
 
@@ -689,38 +687,30 @@
 
             <ul class="social">
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="Facebook">
+                    <a class="social__link" href="https://www.facebook.com/deltaforcegame" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.17V9.9H7.4V13h2.7v8h3.4z"
-                                fill="currentColor" />
+                            <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.17V9.9H7.4V13h2.7v8h3.4z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="X (Twitter)">
+                    <a class="social__link" href="https://x.com/DeltaForce_Game" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M17.53 3h3.06l-6.69 7.64L21.75 21h-5.98l-4.7-6.13L5.7 21H2.63l7.15-8.17L2.25 3h6.13l4.25 5.6L17.53 3zm-1.07 16.2h1.7L7.62 4.72H5.8l10.66 14.48z"
-                                fill="currentColor" />
+                            <path d="M17.53 3h3.06l-6.69 7.64L21.75 21h-5.98l-4.7-6.13L5.7 21H2.63l7.15-8.17L2.25 3h6.13l4.25 5.6L17.53 3zm-1.07 16.2h1.7L7.62 4.72H5.8l10.66 14.48z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="YouTube">
+                    <a class="social__link" href="https://www.youtube.com/@DeltaForceGame" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M21.6 7.2s-.2-1.4-.8-2c-.75-.8-1.6-.8-2-.85C16 4.2 12 4.2 12 4.2s-4 0-6.8.2c-.4.05-1.25.05-2 .85-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.5c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.75.8 1.75.75 2.2.85 1.6.15 6.8.2 6.8.2s4 0 6.8-.2c.4-.06 1.25-.06 2-.86.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.7-.2-3.3-.2-3.3zM9.9 14.2V8.6l5.4 2.8-5.4 2.8z"
-                                fill="currentColor" />
+                            <path d="M21.6 7.2s-.2-1.4-.8-2c-.75-.8-1.6-.8-2-.85C16 4.2 12 4.2 12 4.2s-4 0-6.8.2c-.4.05-1.25.05-2 .85-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.5c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.75.8 1.75.75 2.2.85 1.6.15 6.8.2 6.8.2s4 0 6.8-.2c.4-.06 1.25-.06 2-.86.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.7-.2-3.3-.2-3.3zM9.9 14.2V8.6l5.4 2.8-5.4 2.8z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="Instagram">
+                    <a class="social__link" href="https://www.instagram.com/deltaforcegameglobal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M12 2.2c-2.7 0-3 0-4.05.06-1.05.05-1.77.22-2.4.46a4.9 4.9 0 00-1.78 1.16 4.9 4.9 0 00-1.16 1.78c-.24.63-.41 1.35-.46 2.4C2.1 9 2.1 9.3 2.1 12s0 3 .06 4.05c.05 1.05.22 1.77.46 2.4a4.9 4.9 0 001.16 1.78 4.9 4.9 0 001.78 1.16c.63.24 1.35.41 2.4.46 1.05.06 1.35.06 4.05.06s3 0 4.05-.06c1.05-.05 1.77-.22 2.4-.46a5.1 5.1 0 002.94-2.94c.24-.63.41-1.35.46-2.4.06-1.05.06-1.35.06-4.05s0-3-.06-4.05c-.05-1.05-.22-1.77-.46-2.4a4.9 4.9 0 00-1.16-1.78 4.9 4.9 0 00-1.78-1.16c-.63-.24-1.35-.41-2.4-.46C15 2.2 14.7 2.2 12 2.2zm0 1.8c2.66 0 2.95 0 4 .06.9.04 1.4.19 1.72.32.43.17.74.37 1.06.69.32.32.52.63.69 1.06.13.32.28.83.32 1.72.06 1.05.06 1.34.06 4s0 2.95-.06 4c-.04.9-.19 1.4-.32 1.72a2.9 2.9 0 01-.69 1.06 2.9 2.9 0 01-1.06.69c-.32.13-.83.28-1.72.32-1.05.06-1.34.06-4 .06s-2.95 0-4-.06c-.9-.04-1.4-.19-1.72-.32a2.9 2.9 0 01-1.06-.69 2.9 2.9 0 01-.69-1.06c-.13-.32-.28-.83-.32-1.72-.06-1.05-.06-1.34-.06-4s0-2.95.06-4c.04-.9.19-1.4.32-1.72.17-.43.37-.74.69-1.06.32-.32.63-.52 1.06-.69.32-.13.83-.28 1.72-.32 1.05-.06 1.34-.06 4-.06zm0 3.06a4.94 4.94 0 110 9.88 4.94 4.94 0 010-9.88zm0 1.8a3.14 3.14 0 100 6.28 3.14 3.14 0 000-6.28zm5.14-2.1a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"
-                                fill="currentColor" />
+                            <path d="M12 2.2c-2.7 0-3 0-4.05.06-1.05.05-1.77.22-2.4.46a4.9 4.9 0 00-1.78 1.16 4.9 4.9 0 00-1.16 1.78c-.24.63-.41 1.35-.46 2.4C2.1 9 2.1 9.3 2.1 12s0 3 .06 4.05c.05 1.05.22 1.77.46 2.4a4.9 4.9 0 001.16 1.78 4.9 4.9 0 001.78 1.16c.63.24 1.35.41 2.4.46 1.05.06 1.35.06 4.05.06s3 0 4.05-.06c1.05-.05 1.77-.22 2.4-.46a5.1 5.1 0 002.94-2.94c.24-.63.41-1.35.46-2.4.06-1.05.06-1.35.06-4.05s0-3-.06-4.05c-.05-1.05-.22-1.77-.46-2.4a4.9 4.9 0 00-1.16-1.78 4.9 4.9 0 00-1.78-1.16c-.63-.24-1.35-.41-2.4-.46C15 2.2 14.7 2.2 12 2.2zm0 1.8c2.66 0 2.95 0 4 .06.9.04 1.4.19 1.72.32.43.17.74.37 1.06.69.32.32.52.63.69 1.06.13.32.28.83.32 1.72.06 1.05.06 1.34.06 4s0 2.95-.06 4c-.04.9-.19 1.4-.32 1.72a2.9 2.9 0 01-.69 1.06 2.9 2.9 0 01-1.06.69c-.32.13-.83.28-1.72.32-1.05.06-1.34.06-4 .06s-2.95 0-4-.06c-.9-.04-1.4-.19-1.72-.32a2.9 2.9 0 01-1.06-.69 2.9 2.9 0 01-.69-1.06c-.13-.32-.28-.83-.32-1.72-.06-1.05-.06-1.34-.06-4s0-2.95.06-4c.04-.9.19-1.4.32-1.72.17-.43.37-.74.69-1.06.32-.32.63-.52 1.06-.69.32-.13.83-.28 1.72-.32 1.05-.06 1.34-.06 4-.06zm0 3.06a4.94 4.94 0 110 9.88 4.94 4.94 0 010-9.88zm0 1.8a3.14 3.14 0 100 6.28 3.14 3.14 0 000-6.28zm5.14-2.1a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
@@ -733,8 +723,8 @@
             </p>
 
             <p class="site-footer__copy">
-                &copy; 2025 <strong>Delta Force Fan Site</strong> &mdash; Học phần Lập trình Web cơ bản.
-                Đây là trang web fan-made, không phải trang web chính thức của trò chơi.
+                &copy; 2026 <strong>Delta Force Fan Site</strong> &mdash; Học phần Lập trình Web cơ bản.
+                Đây là trang web fan-made, không phải trang chính thức của trò chơi.
             </p>
         </div>
     </footer>

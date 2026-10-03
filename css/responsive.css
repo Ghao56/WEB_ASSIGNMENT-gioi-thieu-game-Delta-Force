@@ -2,7 +2,7 @@
 
 /* ===================================================================
    DELTA FORCE - FAN SITE
-   File CSS đáp ứng (Y4: media queries - mobile first)
+   File CSS đáp ứng (Y4: media queries)
    Breakpoint: 992px / 768px / 480px
    Ưu tiên: không có thanh cuộn ngang trên mọi kích thước màn hình.
    =================================================================== */
@@ -21,7 +21,7 @@
 
     /* Hero bớt cao để nhìn thấy nội dung ngay */
     .hero__banner {
-        min-height: 600px;
+        min-height: 620px;
     }
 
     .hero__content {
@@ -34,16 +34,12 @@
         gap: 40px;
     }
 
-    .about__value {
-        text-align: left;
-    }
-
     .contact__inner {
         grid-template-columns: 1fr;
         gap: 34px;
     }
 
-    /* Lớp nhân vật: 4 cột -> 2 cột */
+    /* Class nhân vật: 4 cột -> 2 cột */
     .classes__list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -60,12 +56,12 @@
 
     .lightbox__nav {
         padding: 10px 16px;
-        font-size: .8rem;
+        font-size: .9rem;
     }
 }
 
 
-/* ---------- MÀN HÌNH <= 768px: máy tính bảng dọc / tablet ---------- */
+/* ---------- MÀN HÌNH <= 768px: máy tính bảng dọc ---------- */
 @media (max-width: 768px) {
 
     .container {
@@ -77,15 +73,16 @@
     }
 
     .hero__banner {
-        min-height: 540px;
+        min-height: 560px;
     }
 
     .hero__content {
-        padding: 150px 0 110px;
+        padding: 150px 0 120px;
     }
 
-    .hero__title {
-        letter-spacing: .1em;
+    /* Khung ngắm ôm sát mép hơn */
+    .hero__overlay::before {
+        inset: 16px;
     }
 
     /* Tính năng: 4 cột -> 1 cột */
@@ -101,12 +98,12 @@
         transform: none;
     }
 
-    /* Chế độ chơi: 3 cột -> 1 cột */
+    /* Chế độ chơi: 2 cột -> 1 cột */
     .modes__list {
         grid-template-columns: 1fr;
     }
 
-    /* Lớp nhân vật: 2 cột -> 1 cột */
+    /* Class nhân vật: 2 cột -> 1 cột */
     .classes__list {
         grid-template-columns: 1fr;
     }
@@ -141,7 +138,7 @@
 @media (max-width: 480px) {
 
     body {
-        font-size: .96rem;
+        font-size: .98rem;
     }
 
     .container {
@@ -153,9 +150,9 @@
     }
 
     .btn {
-        padding: 13px 26px;
-        font-size: .9rem;
-        letter-spacing: .16em;
+        padding: 13px 24px;
+        font-size: .95rem;
+        letter-spacing: .1em;
         outline-offset: 3px;
     }
 
@@ -172,25 +169,36 @@
     }
 
     .hero__banner {
-        min-height: 500px;
+        min-height: 540px;
     }
 
     .hero__content {
-        padding: 132px 0 100px;
+        padding: 132px 0 110px;
     }
 
     .hero__title {
-        font-size: clamp(2.2rem, 13vw, 3.4rem);
-        letter-spacing: .06em;
+        font-size: clamp(2.4rem, 13vw, 3.4rem);
+        letter-spacing: .03em;
     }
 
     .hero__desc {
-        font-size: .95rem;
+        font-size: 1rem;
     }
 
-    /* Ẩn nút mũi tên trên điện thoại, dùng 3 chấm để chuyển slide */
-    .hero__arrow {
+    /* Ẩn nút mũi tên trên điện thoại, dùng 3 chấm để chuyển slide.
+       Phải dùng lại đúng selector #sN:checked vì nó có độ ưu tiên cao hơn .hero__arrow */
+    .hero__arrow,
+    #s1:checked~.hero__arrow--prev-1,
+    #s2:checked~.hero__arrow--prev-2,
+    #s3:checked~.hero__arrow--prev-3,
+    #s1:checked~.hero__arrow--next-1,
+    #s2:checked~.hero__arrow--next-2,
+    #s3:checked~.hero__arrow--next-3 {
         display: none;
+    }
+
+    .hero__dots {
+        bottom: 36px;
     }
 
     .hero__dot {
@@ -210,6 +218,10 @@
 
     .about__item {
         flex-direction: column;
+    }
+
+    .about__value {
+        text-align: left;
     }
 
     .contact__item {
@@ -235,6 +247,6 @@
 
     .lightbox__nav {
         padding: 9px 14px;
-        font-size: .74rem;
+        font-size: .85rem;
     }
 }
