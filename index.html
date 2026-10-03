@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Delta Force - game bắn chiến thuật góc nhìn thứ nhất miễn phí do Team Jade phát triển và TiMi Studio Group phát hành. Tìm hiểu các chế độ chơi và lớp nhân vật.">
+        content="Delta Force: game bắn súng chiến thuật góc nhìn thứ nhất miễn phí do Team Jade phát triển và TiMi Studio Group phát hành. Tìm hiểu ba chế độ Warfare, Operations, Black Hawk Down và bốn class Assault, Engineer, Support, Recon.">
     <meta name="author" content="Sinh viên - Học phần Lập trình Web cơ bản">
-    <meta name="theme-color" content="#0b0e10">
-    <title>Delta Force | Game bắn chiến thuật miễn phí - Fan-made</title>
+    <meta name="theme-color" content="#0c1011">
+    <title>Delta Force | Game bắn súng chiến thuật miễn phí (fan-made)</title>
 
     <!-- Y1: CSS ngoài - file CSS chính (style.css) và file responsive (responsive.css) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
                 <li class="site-nav__item"><a class="site-nav__link" href="#top">Trang chủ</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#tinh-nang">Tính năng</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#gioi-thieu">Giới thiệu</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="#lop-nhan-vat">Lớp nhân vật</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="#lop-nhan-vat">Class nhân vật</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#che-do">Chế độ chơi</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#thu-vien">Thư viện</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#lien-he">Liên hệ</a></li>
@@ -62,16 +62,16 @@
                 <div class="hero__slides">
                     <figure class="hero__slide hero__slide--1">
                         <img class="hero__image" src="https://cdn-media.sforum.vn/storage/app/media/nhuy/Nhu-Y/tai-game-delta-force-garena-2.jpg"
-                            alt="Ảnh minh họa phông nền chiến thuật của Delta Force" width="1600" height="900">
+                            alt="Ảnh minh họa bối cảnh chiến thuật trong Delta Force" width="1600" height="900">
                     </figure>
                     <figure class="hero__slide hero__slide--2">
                         <img class="hero__image" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2507950/192e49c1f0a1a2e1ec524fbbeb041af29de0a4e8/capsule_616x353.jpg?t=1786330120"
-                            alt="Ảnh minh họa binh lực di động trong chiến trường Delta Force" width="1600"
+                            alt="Ảnh minh họa lực lượng và phương tiện trên chiến trường Delta Force" width="1600"
                             height="900">
                     </figure>
                     <figure class="hero__slide hero__slide--3">
                         <img class="hero__image" src="https://cdn-media.sforum.vn/storage/app/media/phuonganh/delta-force-dat-ky-luc-ve-luong-nguoi-choi-cung-luc.jpg"
-                            alt="Ảnh minh họa phong cảnh phục vụ đội ở Delta Force" width="1600" height="900">
+                            alt="Ảnh minh họa trận đấu quy mô lớn trong Delta Force" width="1600" height="900">
                     </figure>
                 </div>
 
@@ -80,59 +80,52 @@
                 <!-- Nút trước / sau: phải dùng <label for> chứ không dùng <a href>,
                      vì chỉ label mới tick được radio (đổi #target không đổi trạng thái radio) -->
                 <label class="hero__arrow hero__arrow--prev hero__arrow--prev-1" for="s3"
-                    aria-label="Xem ảnh trước">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh trước"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
                 <label class="hero__arrow hero__arrow--prev hero__arrow--prev-2" for="s1"
-                    aria-label="Xem ảnh trước">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh trước"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
                 <label class="hero__arrow hero__arrow--prev hero__arrow--prev-3" for="s2"
-                    aria-label="Xem ảnh trước">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh trước"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
 
                 <label class="hero__arrow hero__arrow--next hero__arrow--next-1" for="s2"
-                    aria-label="Xem ảnh tiếp theo">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh tiếp theo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
                 <label class="hero__arrow hero__arrow--next hero__arrow--next-2" for="s3"
-                    aria-label="Xem ảnh tiếp theo">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh tiếp theo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
                 <label class="hero__arrow hero__arrow--next hero__arrow--next-3" for="s1"
-                    aria-label="Xem ảnh tiếp theo">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                    aria-label="Xem ảnh tiếp theo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
                         <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </label>
+                    </svg></label>
 
                 <div class="container hero__content">
                     <!-- Y2: hiệu ứng vào tại nội dung tiêu đề -->
-                    <p class="hero__kicker">Game chiến thuật miễn phí</p>
+                    <p class="hero__kicker">Game bắn súng chiến thuật miễn phí</p>
                     <h1 class="hero__title">Delta Force</h1>
                     <p class="hero__desc">
-                        Game bắn súng chiến thuật góc nhìn thứ nhất miễn phí, do Team Jade phát triển
-                        và TiMi Studio Group phát hành. Ba chế độ chơi lớn: chiến tranh quy mô lớn,
-                        cưỡng vớt và chiến dịch Black Hawk Down.
+                        Game bắn súng chiến thuật góc nhìn thứ nhất, do Team Jade phát triển và
+                        TiMi Studio Group phát hành. Ba chế độ chơi: Warfare quy mô lớn, Operations
+                        thu thập và rút lui, cùng chiến dịch hợp tác Black Hawk Down.
                     </p>
-                    <a class="btn btn--accent" href="#che-do">Khám phá</a>
+                    <ul class="hero__platforms" aria-label="Nền tảng hỗ trợ">
+                        <li class="hero__platform">PC</li>
+                        <li class="hero__platform">PlayStation 5</li>
+                        <li class="hero__platform">Xbox Series X|S</li>
+                    </ul>
+                    <a class="btn btn--accent" href="#che-do">Khám phá chế độ chơi</a>
                 </div>
 
                 <div class="hero__dots">
@@ -154,38 +147,39 @@
 
                 <ul class="features__list">
                     <li class="features__item">
-                        <span class="features__num" aria-hidden="true">01</span>
-                        <h3 class="features__title">Chiến tranh quy mô lớn</h3>
+                        <span class="features__num" aria-hidden="true">32 vs 32</span>
+                        <h3 class="features__title">Warfare quy mô lớn</h3>
                         <p class="features__text">
-                            32 người chơi mỗi phe trên bản đồ trải rộng cả đất, biển và không trung.
-                            Xe tăng, xe bọn, tàu đổ bộ và trực thăng Black Hawk tham gia chiến đấu.
+                            Mỗi phe có 32 người chơi trên bản đồ rộng gồm mặt đất, mặt nước và không trung.
+                            Xe tăng, xe bọc thép, tàu tấn công và trực thăng Black Hawk cùng tham chiến.
                         </p>
                     </li>
 
                     <li class="features__item features__item--highlight">
-                        <span class="features__num" aria-hidden="true">02</span>
-                        <h3 class="features__title">Chế độ cưỡng vớt</h3>
+                        <span class="features__num" aria-hidden="true">Squad 3 người</span>
+                        <h3 class="features__title">Operations</h3>
                         <p class="features__text">
-                            Tiểu đội 3 người xuất kích, thu thập chiến lợi phẩm, sống sót mọi trận
-                            đánh và rút ra cùng trang bị. Kết hợp PvE và PvP trong cùng một trận.
+                            Tiểu đội 3 người vào bản đồ, thu thập chiến lợi phẩm, sống sót trước cả đối thủ
+                            AI lẫn người chơi khác rồi rút ra cùng trang bị. PvE và PvP diễn ra trong cùng
+                            một trận.
                         </p>
                     </li>
 
                     <li class="features__item">
-                        <span class="features__num" aria-hidden="true">03</span>
+                        <span class="features__num" aria-hidden="true">Co-op</span>
                         <h3 class="features__title">Black Hawk Down</h3>
                         <p class="features__text">
-                            Bản remake chiến dịch hợp tác của game năm 2003: 7 nhiệm vụ, tối đa 4 người
-                            chơi, bối cảnh Mogadishu năm 1993 trong Chiến dịch Gothic Serpent.
+                            Bản làm lại chiến dịch của game năm 2003: 7 nhiệm vụ cho tối đa 4 người chơi,
+                            lấy bối cảnh Mogadishu năm 1993 trong Chiến dịch Gothic Serpent.
                         </p>
                     </li>
 
                     <li class="features__item">
-                        <span class="features__num" aria-hidden="true">04</span>
+                        <span class="features__num" aria-hidden="true">Free-to-play</span>
                         <h3 class="features__title">Miễn phí</h3>
                         <p class="features__text">
-                            Chơi miễn phí trên PC, PlayStation 5 và Xbox Series X|S. Không cần mua thêm
-                            gì để bắt đầu cuộc chiến đấu đầu tiên.
+                            Chơi miễn phí trên PC, PlayStation 5 và Xbox Series X|S. Bạn không cần trả thêm
+                            khoản nào để bắt đầu trận đầu tiên.
                         </p>
                     </li>
                 </ul>
@@ -193,7 +187,7 @@
         </section>
 
 
-        <!-- ============ Y3: GIỚI THIỆU - 2 cột, ảnh bố + nội dung ============ -->
+        <!-- ============ Y3: GIỚI THIỆU - 2 cột, ảnh bên trái + nội dung ============ -->
         <section class="section about" id="gioi-thieu">
             <div class="container about__inner">
 
@@ -202,28 +196,26 @@
                         <img class="about__image" src="https://cdn.muakey.com/storage/media/1LNq74eJrNHKR0BNCAarLT0e7mzNrtKVedPpDhg2.jpg?hash=426afa10"
                             alt="Ảnh minh họa chủ đề chiến thuật của dòng game Delta Force" width="1200"
                             height="900">
-                        <figcaption class="about__badge">NovaLogic 1998 &mdash; ngày nay</figcaption>
+                        <figcaption class="about__badge">Từ NovaLogic 1998 đến nay</figcaption>
                     </figure>
                     <span class="about__accent" aria-hidden="true"></span>
                 </div>
 
                 <div class="about__content">
                     <p class="about__script">Giới thiệu</p>
-                    <h2 class="about__title">Delta Force</h2>
+                    <h2 class="about__title">Về Delta Force</h2>
                     <p class="about__text">
-                        Dòng game Delta Force ra mắt lần đầu năm 1998 do hãng NovaLogic phát triển và nổi
-                        tiếng nhờ những bản chiến thuật chiến đấu trên máy tính. Trong gần ba mươi năm,
-                        dòng game này vẫn giữ nguyên tinh thần: đọc bản đồ, chia đội hình và điều phối
-                        chiến thuật cho cả đội hình.
+                        Dòng game Delta Force ra mắt lần đầu năm 1998 do hãng NovaLogic phát triển, nổi
+                        tiếng với các tựa game bắn súng chiến thuật trên máy tính. Sau gần ba mươi năm,
+                        tinh thần cốt lõi vẫn là đọc bản đồ, chia nhiệm vụ và phối hợp theo đội hình.
                     </p>
                     <p class="about__text">
-                        Phiên bản mới được Team Jade phát triển và TiMi Studio Group (Tencent) phát hành,
-                        xây dựng bằng công nghệ Unreal Engine. Đây là bước ngoi vào thế giới thứ hai của
-                        Delta Force với ba chế độ chơi hoàn toàn khác nhau và lựa chọn nhân vật riêng cho
-                        từng vai trò.
+                        Phiên bản mới do Team Jade phát triển và TiMi Studio Group (Tencent) phát hành,
+                        xây dựng trên Unreal Engine. Đây là bước chuyển mình lớn của dòng game, với ba chế
+                        độ chơi khác nhau và bốn class nhân vật, mỗi class giữ một vai trò riêng trong đội.
                     </p>
 
-                    <a class="btn btn--outline" href="modes.html#bang-so-sanh">Tìm hiểu thêm</a>
+                    <a class="btn btn--outline" href="modes.html#bang-so-sanh">So sánh chế độ chơi</a>
 
                     <ul class="about__list">
                         <li class="about__item">
@@ -231,7 +223,7 @@
                             <span class="about__value">Team Jade</span>
                         </li>
                         <li class="about__item">
-                            <span class="about__label">Nhà xuất bản</span>
+                            <span class="about__label">Nhà phát hành</span>
                             <span class="about__value">TiMi Studio Group (Tencent)</span>
                         </li>
                         <li class="about__item">
@@ -240,7 +232,7 @@
                         </li>
                         <li class="about__item">
                             <span class="about__label">Mô hình giá</span>
-                            <span class="about__value">Miễn phí (Free-to-play)</span>
+                            <span class="about__value">Miễn phí (free-to-play)</span>
                         </li>
                     </ul>
                 </div>
@@ -248,90 +240,90 @@
         </section>
 
 
-        <!-- ============ Y3: LỚP NHÂN VẬT - CSS Grid 4 thẻ, nền tối ============ -->
+        <!-- ============ Y3: CLASS NHÂN VẬT - CSS Grid 4 thẻ, nền tối ============ -->
         <section class="section section--dark classes" id="lop-nhan-vat">
             <div class="container">
                 <div class="classes__intro">
                     <p class="classes__script">Chọn vai trò của bạn</p>
-                    <h2 class="classes__title">Lớp nhân vật</h2>
+                    <h2 class="classes__title">Bốn class nhân vật</h2>
                     <p class="classes__text">
-                        Mỗi lựa chọn Operator đều mang một vai trò riêng, từ trinh sát tầm xa đến kỹ sư
-                        trang bị nặng. Bốn lớp nhân vật dưới đây được thiết kế để bù đắc điểm yếu cho nhau
-                        khi vào trận.
+                        Mỗi Operator thuộc một trong bốn class, từ tiền tuyến, công binh, hỗ trợ đến trinh
+                        sát tầm xa. Các class bù đắp điểm yếu cho nhau khi vào trận, nên đội hình cân bằng
+                        luôn có lợi thế.
                     </p>
-                    <a class="btn btn--accent" href="modes.html#bang-so-sanh">So sánh chế độ</a>
+                    <a class="btn btn--accent" href="modes.html#bang-so-sanh">So sánh chế độ chơi</a>
                 </div>
 
                 <ul class="classes__list">
 
                     <li class="class-card">
-                        <a class="class-card__media" href="#lop-dieu-phuong">
+                        <a class="class-card__media" href="#class-assault"
+                            aria-label="Phóng to ảnh class Assault">
                             <img class="class-card__image" src="https://gamelade.vn/wp-content/uploads/2024/10/delta-force-hawk-ops-cong-bo-ngay-ra-mat-cho-pc-thumb.jpg"
-                                alt="Ảnh minh họa lớp nhân vật Điều phương (Assault)" width="800" height="1000">
-                            <span class="class-card__zoom" aria-hidden="true">+</span>
+                                alt="Ảnh minh họa class Assault" width="800" height="1000">
                         </a>
-                        <h3 class="class-card__title">Điều phương</h3>
+                        <h3 class="class-card__title">Assault</h3>
                         <p class="class-card__role">
                             <span class="class-card__tag">Vai trò</span>
                             <span class="class-card__value">Tiền tuyến</span>
                         </p>
                         <p class="class-card__text">
-                            Cửa quân tiền công: khả năng chiến đấu tốt hơn và di chuyển mượt mà
-                            khi ngắm bắn.
+                            Dẫn đầu giao tranh ở tuyến đầu, di chuyển nhanh hơn khi ngắm bắn và tạo áp lực
+                            lên đối phương.
                         </p>
                         <span class="class-card__divider" aria-hidden="true"></span>
                     </li>
 
                     <li class="class-card">
-                        <a class="class-card__media" href="#lop-ky-su">
+                        <a class="class-card__media" href="#class-engineer"
+                            aria-label="Phóng to ảnh class Engineer">
                             <img class="class-card__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTugOCJu-dEYwmEJjJZSQpOGSAnaVLBidTvftbQ-h4lIfaWn8B4BPmUuag&s=10"
-                                alt="Ảnh minh họa lớp nhân vật Kỹ sư (Engineer)" width="800" height="1000">
-                            <span class="class-card__zoom" aria-hidden="true">+</span>
+                                alt="Ảnh minh họa class Engineer" width="800" height="1000">
                         </a>
-                        <h3 class="class-card__title">Kỹ sư</h3>
+                        <h3 class="class-card__title">Engineer</h3>
                         <p class="class-card__role">
                             <span class="class-card__tag">Vai trò</span>
-                            <span class="class-card__value">Trang bị nặng</span>
+                            <span class="class-card__value">Chống giáp</span>
                         </p>
                         <p class="class-card__text">
-                            Mang theo phương tiện, vũ khí và thiết bị nặng để thay đổi
-                            đội hình của cả đội.
+                            Đối phó phương tiện và xe bọc thép của địch, sửa chữa phương tiện phe mình và
+                            dựng công sự cho cả đội.
                         </p>
                         <span class="class-card__divider" aria-hidden="true"></span>
                     </li>
 
                     <li class="class-card">
-                        <a class="class-card__media" href="#lop-ho-tro">
+                        <a class="class-card__media" href="#class-support"
+                            aria-label="Phóng to ảnh class Support">
                             <img class="class-card__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlJ7BvT6oPUDhnPOmd1_uPrVyuOSXHVAeJvtAPhKaSftuq6cUQp7_J-0&s=10"
-                                alt="Ảnh minh họa lớp nhân vật Hỗ trợ (Support)" width="800" height="1000">
-                            <span class="class-card__zoom" aria-hidden="true">+</span>
+                                alt="Ảnh minh họa class Support" width="800" height="1000">
                         </a>
-                        <h3 class="class-card__title">Hỗ trợ</h3>
+                        <h3 class="class-card__title">Support</h3>
                         <p class="class-card__role">
                             <span class="class-card__tag">Vai trò</span>
-                            <span class="class-card__value">Hỗ trợ</span>
+                            <span class="class-card__value">Hồi phục</span>
                         </p>
                         <p class="class-card__text">
-                            Cung cấp đạn, máy lọc và hỗ trợ về mặt hồi phục
-                            cho cả tiểu đội.
+                            Hồi phục cho đồng đội, cứu đồng đội nhanh hơn và tiếp tế đạn dược để giữ cả tiểu
+                            đội trụ vững trong trận.
                         </p>
                         <span class="class-card__divider" aria-hidden="true"></span>
                     </li>
 
                     <li class="class-card">
-                        <a class="class-card__media" href="#lop-trinh-sat">
+                        <a class="class-card__media" href="#class-recon"
+                            aria-label="Phóng to ảnh class Recon">
                             <img class="class-card__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEyt2CAb7sVM5emlsg86lUben7ew0uciZMYX6aHHLDURZK7AMDMpej3XCO&s=10"
-                                alt="Ảnh minh họa lớp nhân vật Trinh sát (Recon)" width="800" height="1000">
-                            <span class="class-card__zoom" aria-hidden="true">+</span>
+                                alt="Ảnh minh họa class Recon" width="800" height="1000">
                         </a>
-                        <h3 class="class-card__title">Trinh sát</h3>
+                        <h3 class="class-card__title">Recon</h3>
                         <p class="class-card__role">
                             <span class="class-card__tag">Vai trò</span>
-                            <span class="class-card__value">Bắn tỉa</span>
+                            <span class="class-card__value">Trinh sát</span>
                         </p>
                         <p class="class-card__text">
-                            Quan sát bằng ống ngắm, gọi tọa độ và hỗ trợ
-                            tiếp liệu từ xa cho đội hình.
+                            Quan sát và bắn tỉa từ xa, thu thập thông tin về đối phương và báo vị trí cho
+                            cả đội.
                         </p>
                         <span class="class-card__divider" aria-hidden="true"></span>
                     </li>
@@ -339,43 +331,39 @@
             </div>
 
             <!-- ============ Y4: LIGHTBOX THUẦN CSS (dùng :target) ============ -->
-            <div class="lightbox" id="lop-dieu-phuong">
+            <div class="lightbox" id="class-assault">
                 <a class="lightbox__close" href="#lop-nhan-vat" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/class-assault.svg"
-                        alt="Ảnh phóng to lớp nhân vật Điều phương (Assault)" width="800" height="1000">
-                    <figcaption class="lightbox__caption">Điều phương (Assault) &mdash; vai trò tiền tuyến.
-                    </figcaption>
+                        alt="Ảnh phóng to class Assault" width="800" height="1000">
+                    <figcaption class="lightbox__caption">Assault: vai trò tiền tuyến</figcaption>
                 </figure>
             </div>
 
-            <div class="lightbox" id="lop-ky-su">
+            <div class="lightbox" id="class-engineer">
                 <a class="lightbox__close" href="#lop-nhan-vat" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/class-engineer.svg"
-                        alt="Ảnh phóng to lớp nhân vật Kỹ sư (Engineer)" width="800" height="1000">
-                    <figcaption class="lightbox__caption">Kỹ sư (Engineer) &mdash; vai trò trang bị nặng.
-                    </figcaption>
+                        alt="Ảnh phóng to class Engineer" width="800" height="1000">
+                    <figcaption class="lightbox__caption">Engineer: vai trò chống giáp và sửa chữa</figcaption>
                 </figure>
             </div>
 
-            <div class="lightbox" id="lop-ho-tro">
+            <div class="lightbox" id="class-support">
                 <a class="lightbox__close" href="#lop-nhan-vat" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/class-support.svg"
-                        alt="Ảnh phóng to lớp nhân vật Hỗ trợ (Support)" width="800" height="1000">
-                    <figcaption class="lightbox__caption">Hỗ trợ (Support) &mdash; vai trò hỗ trợ tiểu đội.
-                    </figcaption>
+                        alt="Ảnh phóng to class Support" width="800" height="1000">
+                    <figcaption class="lightbox__caption">Support: vai trò hồi phục và tiếp tế</figcaption>
                 </figure>
             </div>
 
-            <div class="lightbox" id="lop-trinh-sat">
+            <div class="lightbox" id="class-recon">
                 <a class="lightbox__close" href="#lop-nhan-vat" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/class-recon.svg"
-                        alt="Ảnh phóng to lớp nhân vật Trinh sát (Recon)" width="800" height="1000">
-                    <figcaption class="lightbox__caption">Trinh sát (Recon) &mdash; vai trò bắn tỉa.
-                    </figcaption>
+                        alt="Ảnh phóng to class Recon" width="800" height="1000">
+                    <figcaption class="lightbox__caption">Recon: vai trò trinh sát và bắn tỉa</figcaption>
                 </figure>
             </div>
         </section>
@@ -394,45 +382,45 @@
                     <li class="mode-card">
                         <figure class="mode-card__media">
                             <img class="mode-card__image" src="https://maytinhre.vn/wp-content/uploads/2025/08/delta-force-06.jpg"
-                                alt="Ảnh minh họa chế độ Chiến tranh quy mô lớn" width="900" height="600">
+                                alt="Ảnh minh họa chế độ Warfare" width="900" height="600">
                         </figure>
                         <div class="mode-card__body">
-                            <h3 class="mode-card__title">Chiến tranh quy mô lớn</h3>
+                            <h3 class="mode-card__title">Warfare</h3>
                             <p class="mode-card__text">
-                                Đường chiến 32 vs 32 trên bản đồ trải rộng cả đất, biển và không trung,
-                                có phương tiện cơ giác hỗ trợ và cơ chế gọi tiếp viện.
+                                Trận 32 vs 32 trên bản đồ rộng gồm mặt đất, mặt nước và không trung, có phương
+                                tiện chiến đấu và điểm hồi sinh cho đồng đội.
                             </p>
-                            <a class="mode-card__link" href="modes.html#che-do-1">Xem thêm</a>
+                            <a class="mode-card__link" href="modes.html#che-do-1">Xem chi tiết</a>
                         </div>
                     </li>
 
                     <li class="mode-card">
                         <figure class="mode-card__media">
                             <img class="mode-card__image" src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2025/08/operation-delta-force-thumb.jpg"
-                                alt="Ảnh minh họa chế độ Cưỡng vớt (Operations)" width="900" height="600">
+                                alt="Ảnh minh họa chế độ Operations" width="900" height="600">
                         </figure>
                         <div class="mode-card__body">
-                            <h3 class="mode-card__title">Cưỡng vớt</h3>
+                            <h3 class="mode-card__title">Operations</h3>
                             <p class="mode-card__text">
-                                Mang trang bị vào bản đồ, thu thập chiến lợi phẩm, sống sót mọi trận
-                                đánh rồi rút ra cùng đồ ngoại thành.
+                                Mang trang bị vào bản đồ, thu thập chiến lợi phẩm, sống sót qua các cuộc
+                                giao tranh rồi rút ra cùng toàn bộ đồ đã nhặt.
                             </p>
-                            <a class="mode-card__link" href="modes.html#che-do-2">Xem thêm</a>
+                            <a class="mode-card__link" href="modes.html#che-do-2">Xem chi tiết</a>
                         </div>
                     </li>
 
                     <li class="mode-card">
                         <figure class="mode-card__media">
                             <img class="mode-card__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJR6aPDIB5blIa_VQRadprkZB8G0Y_ccbUv8EPNJYAtyxXlZmYdDUCsEw&s=10"
-                                alt="Ảnh minh họa chế độ chiến dịch Black Hawk Down" width="900" height="600">
+                                alt="Ảnh minh họa chiến dịch Black Hawk Down" width="900" height="600">
                         </figure>
                         <div class="mode-card__body">
                             <h3 class="mode-card__title">Black Hawk Down</h3>
                             <p class="mode-card__text">
-                                Bản remake chiến dịch hợp tác năm 2003, bối cảnh Mogadishu 1993 với
-                                7 nhiệm vụ cho tối đa 4 người chơi.
+                                Bản làm lại chiến dịch năm 2003, bối cảnh Mogadishu 1993, gồm 7 nhiệm vụ
+                                cho tối đa 4 người chơi.
                             </p>
-                            <a class="mode-card__link" href="modes.html#che-do-3">Xem thêm</a>
+                            <a class="mode-card__link" href="modes.html#che-do-3">Xem chi tiết</a>
                         </div>
                     </li>
                 </ul>
@@ -452,23 +440,23 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="#anh-1">
                             <img class="gallery__image" src="https://cdn2.unrealengine.com/delta-force-feature-black-hawk-down-1-1920x1080-3427a900d117.jpg"
-                                alt="Ảnh minh họa bản đồ chiến tranh trên không" width="900" height="675">
-                            <span class="gallery__caption">Bản đồ chiến tranh trên không</span>
+                                alt="Ảnh minh họa trận chiến trên không trong Delta Force" width="900" height="675">
+                            <span class="gallery__caption">Warfare: trận chiến trên không</span>
                         </a>
                     </li>
                     <li class="gallery__item">
                         <a class="gallery__link" href="#anh-2">
                             <img class="gallery__image" src="https://cdn-media.sforum.vn/storage/app/media/quangduy/warfare-delta-force-gameplay-ava-1.jpg"
-                                alt="Ảnh minh họa tiểu đội 3 người trong chế độ cưỡng vớt" width="900"
+                                alt="Ảnh minh họa tiểu đội ba người trong Delta Force" width="900"
                                 height="675">
-                            <span class="gallery__caption">Tiểu đội trong chế độ cưỡng vớt</span>
+                            <span class="gallery__caption">Tiểu đội ba người</span>
                         </a>
                     </li>
                     <li class="gallery__item">
                         <a class="gallery__link" href="#anh-3">
                             <img class="gallery__image" src="https://cdn-media.sforum.vn/storage/app/media/phuonganh/phuonganh/delta-force-map-6.jpg"
-                                alt="Ảnh minh họa xe bọn tiến công trên bản đồ rộng" width="900" height="675">
-                            <span class="gallery__caption">Phương tiện cơ giác tiến công</span>
+                                alt="Ảnh minh họa xe bọc thép tiến công trên bản đồ rộng" width="900" height="675">
+                            <span class="gallery__caption">Warfare: xe bọc thép tiến công</span>
                         </a>
                     </li>
                     <li class="gallery__item">
@@ -476,20 +464,20 @@
                             <img class="gallery__image" src="https://web.df.garena.com/02_h5/240923_official_website/vi/pc/gamemode_bg_03.jpg"
                                 alt="Ảnh minh họa chiến dịch Black Hawk Down tại Mogadishu" width="900"
                                 height="675">
-                            <span class="gallery__caption">Chiến dịch Black Hawk Down</span>
+                            <span class="gallery__caption">Black Hawk Down: Mogadishu</span>
                         </a>
                     </li>
                     <li class="gallery__item">
                         <a class="gallery__link" href="#anh-5">
                             <img class="gallery__image" src="https://sm.ign.com/t/ign_za/video/d/delta-forc/delta-force-hawk-ops-official-ascension-map-overview-trailer_s749.1280.png"
-                                alt="Ảnh minh họa màn hình chiến thuật của game" width="900" height="675">
-                            <span class="gallery__caption">Màn hình chiến thuật</span>
+                                alt="Ảnh minh họa tổng quan bản đồ chiến thuật của game" width="900" height="675">
+                            <span class="gallery__caption">Tổng quan bản đồ</span>
                         </a>
                     </li>
                     <li class="gallery__item">
                         <a class="gallery__link" href="#anh-6">
                             <img class="gallery__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9Z0teZsjcC3MJPZM0XqBwGYOx5kqVYBPnbV1WdD5JQ&s=10"
-                                alt="Ảnh minh họa giao diện chọn nhân vật Operator" width="900" height="675">
+                                alt="Ảnh minh họa giao diện chọn Operator" width="900" height="675">
                             <span class="gallery__caption">Giao diện chọn Operator</span>
                         </a>
                     </li>
@@ -501,8 +489,8 @@
                 <a class="lightbox__close" href="#thu-vien" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-1.svg"
-                        alt="Ảnh phóng to bản đồ chiến tranh trên không" width="900" height="675">
-                    <figcaption class="lightbox__caption">Bản đồ chiến tranh trên không (1/6)</figcaption>
+                        alt="Ảnh phóng to trận chiến trên không trong Delta Force" width="900" height="675">
+                    <figcaption class="lightbox__caption">Warfare: trận chiến trên không (1/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-6">Ảnh trước</a>
                 <a class="lightbox__nav lightbox__nav--next" href="#anh-2">Ảnh sau</a>
@@ -512,8 +500,8 @@
                 <a class="lightbox__close" href="#thu-vien" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-2.svg"
-                        alt="Ảnh phóng to tiểu đội trong chế độ cưỡng vớt" width="900" height="675">
-                    <figcaption class="lightbox__caption">Tiểu đội trong chế độ cưỡng vớt (2/6)</figcaption>
+                        alt="Ảnh phóng to tiểu đội ba người trong Delta Force" width="900" height="675">
+                    <figcaption class="lightbox__caption">Tiểu đội ba người (2/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-1">Ảnh trước</a>
                 <a class="lightbox__nav lightbox__nav--next" href="#anh-3">Ảnh sau</a>
@@ -523,8 +511,8 @@
                 <a class="lightbox__close" href="#thu-vien" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-3.svg"
-                        alt="Ảnh phóng to phương tiện cơ giác tiến công" width="900" height="675">
-                    <figcaption class="lightbox__caption">Phương tiện cơ giác tiến công (3/6)</figcaption>
+                        alt="Ảnh phóng to xe bọc thép tiến công trên bản đồ rộng" width="900" height="675">
+                    <figcaption class="lightbox__caption">Warfare: xe bọc thép tiến công (3/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-2">Ảnh trước</a>
                 <a class="lightbox__nav lightbox__nav--next" href="#anh-4">Ảnh sau</a>
@@ -535,7 +523,7 @@
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-4.svg"
                         alt="Ảnh phóng to chiến dịch Black Hawk Down tại Mogadishu" width="900" height="675">
-                    <figcaption class="lightbox__caption">Chiến dịch Black Hawk Down (4/6)</figcaption>
+                    <figcaption class="lightbox__caption">Black Hawk Down: Mogadishu (4/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-3">Ảnh trước</a>
                 <a class="lightbox__nav lightbox__nav--next" href="#anh-5">Ảnh sau</a>
@@ -545,8 +533,8 @@
                 <a class="lightbox__close" href="#thu-vien" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-5.svg"
-                        alt="Ảnh phóng to màn hình chiến thuật của game" width="900" height="675">
-                    <figcaption class="lightbox__caption">Màn hình chiến thuật (5/6)</figcaption>
+                        alt="Ảnh phóng to tổng quan bản đồ chiến thuật của game" width="900" height="675">
+                    <figcaption class="lightbox__caption">Tổng quan bản đồ (5/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-4">Ảnh trước</a>
                 <a class="lightbox__nav lightbox__nav--next" href="#anh-6">Ảnh sau</a>
@@ -556,7 +544,7 @@
                 <a class="lightbox__close" href="#thu-vien" aria-label="Đóng ảnh">&times;</a>
                 <figure class="lightbox__figure">
                     <img class="lightbox__image" src="images/gallery-6.svg"
-                        alt="Ảnh phóng to giao diện chọn nhân vật Operator" width="900" height="675">
+                        alt="Ảnh phóng to giao diện chọn Operator" width="900" height="675">
                     <figcaption class="lightbox__caption">Giao diện chọn Operator (6/6)</figcaption>
                 </figure>
                 <a class="lightbox__nav lightbox__nav--prev" href="#anh-5">Ảnh trước</a>
@@ -588,7 +576,7 @@
                             <span class="contact__body">
                                 <span class="contact__label">Địa chỉ</span>
                                 <span class="contact__value">Trường Cao đẳng FPT, Hà Nội</span>
-                                <span class="contact__note">Địa chỉ mẫu &mdash; sinh viên tự cập nhật</span>
+                                <span class="contact__note">Địa chỉ mẫu, sinh viên tự cập nhật</span>
                             </span>
                         </li>
 
@@ -651,15 +639,15 @@
                             <label class="form__label" for="noi-dung">Nội dung <span class="form__star">*</span>
                             </label>
                             <textarea class="form__textarea" id="noi-dung" name="noi-dung" rows="5"
-                                placeholder="Chia sẻ ý tưởng của bạn về trang web này" required minlength="10"></textarea>
+                                placeholder="Chia sẻ góp ý của bạn về trang web này" required minlength="10"></textarea>
                         </div>
 
-                        <button class="btn btn--accent form__submit" type="submit">Gửi</button>
+                        <button class="btn btn--accent form__submit" type="submit">Gửi góp ý</button>
 
                         <p class="form__hint">
-                            Các trường có dấu <span class="form__star">*</span> là bắt buộc. Trang này
-                            không có JavaScript nên dữ liệu chỉ được kiểm tra ở chính trình duyệt, chưa gửi về
-                            máy chủ.
+                            Các trường có dấu <span class="form__star">*</span> là bắt buộc. Trang này không
+                            dùng JavaScript nên trình duyệt chỉ kiểm tra dữ liệu ngay trên máy bạn; biểu mẫu
+                            chưa được gửi về máy chủ.
                         </p>
                     </form>
                 </div>
@@ -667,7 +655,7 @@
         </section>
 
 
-        <!-- ============ BẢN ĐỒ (SVG tĩnh, không cần JavaScript) ============ -->
+        <!-- ============ BẢN ĐỒ (hình minh họa, không cần JavaScript) ============ -->
         <section class="section section--grey map" id="ban-do">
             <div class="container">
                 <header class="section-head section-head--center">
@@ -677,12 +665,12 @@
 
                 <figure class="map__frame">
                     <img class="map__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_68EZ2M8xYpHfB1-2LxRqIVzfKQG515C_Ihoac0o2SrqzqYJ830a7PSs&s=10"
-                        alt="Bản đồ minh họa khu vực Mogadishu, Somalia - tọa độ 2.0469 độ Bắc, 45.3182 độ Đông"
+                        alt="Hình minh họa khu vực Mogadishu, Somalia, tọa độ 2,0469 độ Bắc, 45,3182 độ Đông"
                         width="900" height="560">
                     <figcaption class="map__caption">
-                        Tọa độ 2.0469&#176; B&#194;c, 45.3182&#176; &#212;ong &mdash; Mogadishu, Somalia: bối cảnh
-                        Chiến dịch Gothic Serpent năm 1993, nơi diễn ra chiến dịch Black Hawk Down. Hình này là
-                        <strong>sơ đồ minh họa do sinh viên tự vẽ</strong>, không phải bản đồ chính thức.
+                        Tọa độ 2,0469&deg; Bắc, 45,3182&deg; Đông &mdash; Mogadishu, Somalia: bối cảnh của
+                        Chiến dịch Gothic Serpent năm 1993 và chế độ Black Hawk Down. Hình này chỉ mang tính
+                        <strong>minh họa</strong>, không phải bản đồ chính thức của game.
                     </figcaption>
                 </figure>
             </div>
@@ -697,38 +685,30 @@
 
             <ul class="social">
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="Facebook">
+                    <a class="social__link" href="https://www.facebook.com/deltaforcegame" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.17V9.9H7.4V13h2.7v8h3.4z"
-                                fill="currentColor" />
+                            <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.17V9.9H7.4V13h2.7v8h3.4z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="X (Twitter)">
+                    <a class="social__link" href="https://x.com/DeltaForce_Game" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M17.53 3h3.06l-6.69 7.64L21.75 21h-5.98l-4.7-6.13L5.7 21H2.63l7.15-8.17L2.25 3h6.13l4.25 5.6L17.53 3zm-1.07 16.2h1.7L7.62 4.72H5.8l10.66 14.48z"
-                                fill="currentColor" />
+                            <path d="M17.53 3h3.06l-6.69 7.64L21.75 21h-5.98l-4.7-6.13L5.7 21H2.63l7.15-8.17L2.25 3h6.13l4.25 5.6L17.53 3zm-1.07 16.2h1.7L7.62 4.72H5.8l10.66 14.48z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="YouTube">
+                    <a class="social__link" href="https://www.youtube.com/@DeltaForceGame" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M21.6 7.2s-.2-1.4-.8-2c-.75-.8-1.6-.8-2-.85C16 4.2 12 4.2 12 4.2s-4 0-6.8.2c-.4.05-1.25.05-2 .85-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.5c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.75.8 1.75.75 2.2.85 1.6.15 6.8.2 6.8.2s4 0 6.8-.2c.4-.06 1.25-.06 2-.86.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.7-.2-3.3-.2-3.3zM9.9 14.2V8.6l5.4 2.8-5.4 2.8z"
-                                fill="currentColor" />
+                            <path d="M21.6 7.2s-.2-1.4-.8-2c-.75-.8-1.6-.8-2-.85C16 4.2 12 4.2 12 4.2s-4 0-6.8.2c-.4.05-1.25.05-2 .85-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.5c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.75.8 1.75.75 2.2.85 1.6.15 6.8.2 6.8.2s4 0 6.8-.2c.4-.06 1.25-.06 2-.86.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.7-.2-3.3-.2-3.3zM9.9 14.2V8.6l5.4 2.8-5.4 2.8z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
-                    <a class="social__link" href="#" aria-label="Instagram">
+                    <a class="social__link" href="https://www.instagram.com/deltaforcegameglobal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                            <path
-                                d="M12 2.2c-2.7 0-3 0-4.05.06-1.05.05-1.77.22-2.4.46a4.9 4.9 0 00-1.78 1.16 4.9 4.9 0 00-1.16 1.78c-.24.63-.41 1.35-.46 2.4C2.1 9 2.1 9.3 2.1 12s0 3 .06 4.05c.05 1.05.22 1.77.46 2.4a4.9 4.9 0 001.16 1.78 4.9 4.9 0 001.78 1.16c.63.24 1.35.41 2.4.46 1.05.06 1.35.06 4.05.06s3 0 4.05-.06c1.05-.05 1.77-.22 2.4-.46a5.1 5.1 0 002.94-2.94c.24-.63.41-1.35.46-2.4.06-1.05.06-1.35.06-4.05s0-3-.06-4.05c-.05-1.05-.22-1.77-.46-2.4a4.9 4.9 0 00-1.16-1.78 4.9 4.9 0 00-1.78-1.16c-.63-.24-1.35-.41-2.4-.46C15 2.2 14.7 2.2 12 2.2zm0 1.8c2.66 0 2.95 0 4 .06.9.04 1.4.19 1.72.32.43.17.74.37 1.06.69.32.32.52.63.69 1.06.13.32.28.83.32 1.72.06 1.05.06 1.34.06 4s0 2.95-.06 4c-.04.9-.19 1.4-.32 1.72a2.9 2.9 0 01-.69 1.06 2.9 2.9 0 01-1.06.69c-.32.13-.83.28-1.72.32-1.05.06-1.34.06-4 .06s-2.95 0-4-.06c-.9-.04-1.4-.19-1.72-.32a2.9 2.9 0 01-1.06-.69 2.9 2.9 0 01-.69-1.06c-.13-.32-.28-.83-.32-1.72-.06-1.05-.06-1.34-.06-4s0-2.95.06-4c.04-.9.19-1.4.32-1.72.17-.43.37-.74.69-1.06.32-.32.63-.52 1.06-.69.32-.13.83-.28 1.72-.32 1.05-.06 1.34-.06 4-.06zm0 3.06a4.94 4.94 0 110 9.88 4.94 4.94 0 010-9.88zm0 1.8a3.14 3.14 0 100 6.28 3.14 3.14 0 000-6.28zm5.14-2.1a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"
-                                fill="currentColor" />
+                            <path d="M12 2.2c-2.7 0-3 0-4.05.06-1.05.05-1.77.22-2.4.46a4.9 4.9 0 00-1.78 1.16 4.9 4.9 0 00-1.16 1.78c-.24.63-.41 1.35-.46 2.4C2.1 9 2.1 9.3 2.1 12s0 3 .06 4.05c.05 1.05.22 1.77.46 2.4a4.9 4.9 0 001.16 1.78 4.9 4.9 0 001.78 1.16c.63.24 1.35.41 2.4.46 1.05.06 1.35.06 4.05.06s3 0 4.05-.06c1.05-.05 1.77-.22 2.4-.46a5.1 5.1 0 002.94-2.94c.24-.63.41-1.35.46-2.4.06-1.05.06-1.35.06-4.05s0-3-.06-4.05c-.05-1.05-.22-1.77-.46-2.4a4.9 4.9 0 00-1.16-1.78 4.9 4.9 0 00-1.78-1.16c-.63-.24-1.35-.41-2.4-.46C15 2.2 14.7 2.2 12 2.2zm0 1.8c2.66 0 2.95 0 4 .06.9.04 1.4.19 1.72.32.43.17.74.37 1.06.69.32.32.52.63.69 1.06.13.32.28.83.32 1.72.06 1.05.06 1.34.06 4s0 2.95-.06 4c-.04.9-.19 1.4-.32 1.72a2.9 2.9 0 01-.69 1.06 2.9 2.9 0 01-1.06.69c-.32.13-.83.28-1.72.32-1.05.06-1.34.06-4 .06s-2.95 0-4-.06c-.9-.04-1.4-.19-1.72-.32a2.9 2.9 0 01-1.06-.69 2.9 2.9 0 01-.69-1.06c-.13-.32-.28-.83-.32-1.72-.06-1.05-.06-1.34-.06-4s0-2.95.06-4c.04-.9.19-1.4.32-1.72.17-.43.37-.74.69-1.06.32-.32.63-.52 1.06-.69.32-.13.83-.28 1.72-.32 1.05-.06 1.34-.06 4-.06zm0 3.06a4.94 4.94 0 110 9.88 4.94 4.94 0 010-9.88zm0 1.8a3.14 3.14 0 100 6.28 3.14 3.14 0 000-6.28zm5.14-2.1a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z" fill="currentColor"></path>
                         </svg>
                     </a>
                 </li>
@@ -741,8 +721,8 @@
             </p>
 
             <p class="site-footer__copy">
-                &copy; 2025 <strong>Delta Force Fan Site</strong> &mdash; Học phần Lập trình Web cơ bản.
-                Đây là trang web fan-made, không phải trang web chính thức của trò chơi.
+                &copy; 2026 <strong>Delta Force Fan Site</strong> &mdash; Học phần Lập trình Web cơ bản.
+                Đây là trang web fan-made, không phải trang chính thức của trò chơi.
             </p>
 
             <!-- TODO: sinh viên tự bổ sung Họ tên - MSSV - Lớp ở đây trước khi nộp bài -->
