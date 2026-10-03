@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Chi tiết ba chế độ chơi của Delta Force: chiến tranh quy mô lớn, cưỡng vớt và chiến dịch Black Hawk Down, kèm bảng so sánh.">
+        content="Chi tiết ba chế độ chơi của Delta Force:Chiến Trường (Warfare) Chiến Dịch / Rút Quân và chiến dịch Black Hawk Down, kèm bảng so sánh.">
     <meta name="author" content="Sinh viên - Học phần Lập trình Web cơ bản">
     <meta name="theme-color" content="#0b0e10">
     <title>Chế độ chơi | Delta Force - Fan-made</title>
@@ -38,6 +38,64 @@
             max-width: 720px;
             margin: 0 auto;
             color: var(--text-muted);
+        }
+
+        .mode-preview-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 940px;
+            margin: 34px auto 0;
+        }
+
+        .mode-preview {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            aspect-ratio: 16 / 7;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: var(--panel-2);
+        }
+
+        .mode-preview::after {
+            position: absolute;
+            inset: 35% 0 0;
+            background: linear-gradient(transparent, rgba(11, 14, 16, .9));
+            content: "";
+        }
+
+        .mode-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--t-base), filter var(--t-base);
+        }
+
+        .mode-preview span {
+            position: absolute;
+            z-index: 1;
+            right: 14px;
+            bottom: 12px;
+            left: 14px;
+            color: var(--text);
+            font-family: var(--font-head);
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .mode-preview:hover img,
+        .mode-preview:focus-visible img {
+            filter: saturate(1.15);
+            transform: scale(1.04);
+        }
+
+        .mode-preview:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
 
         /* Thanh điều hướng nhanh giữa các mục (position: sticky) */
@@ -82,9 +140,11 @@
 
         .mode-detail__float {
             float: left;
-            width: 300px;
-            margin: 0 26px 18px 0;
-            border-radius: 12px;
+            width: 450px;
+            max-width: 100%;
+            height: auto;
+            margin: 10px 20px 20px 10px;
+            border-radius: 15px;
             box-shadow: var(--shadow);
         }
 
@@ -119,6 +179,7 @@
             background: var(--panel-2);
             border: 1px solid var(--line);
             border-radius: 10px;
+            color: white; /* thêm dòng này để chữ nội dung thành màu trắng */
         }
 
         /* Nút chấm to nhỏ bằng CSS thuần (không dùng icon) */
@@ -130,7 +191,7 @@
             width: 9px;
             height: 9px;
             margin-top: -4px;
-            background: var(--accent);
+            background: white; /* đổi từ var(--accent) sang trắng */
             border-radius: 50%;
         }
 
@@ -141,12 +202,19 @@
             font-weight: 700;
             letter-spacing: .06em;
             text-transform: uppercase;
-            color: var(--accent);
+            color: green; /* đổi từ vàng sang xanh lá */
         }
 
         /* Bảng so sánh - cho phép cuộn ngang trên màn hình nhỏ */
+        #bang-so-sanh {
+            background:
+                linear-gradient(rgba(11, 14, 16, .82), rgba(11, 14, 16, .9)),
+                url("https://cdn-media.sforum.vn/storage/app/media/phuonganh/delta-force-hop-tac-metal-gear-solid-delta-snake-eater.jpg") center / cover no-repeat;
+        }
+
         .table-wrap {
             overflow-x: auto;
+            background: rgba(11, 14, 16, 0.648);
             border: 1px solid var(--line);
             border-radius: 16px;
         }
@@ -200,6 +268,54 @@
             border-bottom: 0;
         }
 
+        #che-do-1 {
+            background:
+                linear-gradient(rgba(233, 237, 240, 0.47), rgba(233, 237, 240, 0.618)),
+                url("https://hoanghamobile.com/tin-tuc/wp-content/uploads/2025/05/review-delta-force-mobile-thumb.jpg") center / cover no-repeat;
+        }
+
+        #che-do-2 {
+            background:
+                linear-gradient(rgba(21, 27, 31, .82), rgba(21, 27, 31, .88)),
+                url("https://lh7-rt.googleusercontent.com/docsz/AD_4nXchIKrFjtYJU5OiJDu5yjf-hxCAi0wvPqkmPSoaCOpA_M5I2nkU5eXwXjdED3zyVOwtVgGg4ZG-DeCSbKzT-2ges70KYmXfSSrE_FvE1TGtu4XblmXU1bgNoGxyU2_vDal2kVHqdw?key=NprUMrcyKej3EbdQtYNoLQ") center / cover no-repeat;
+        }
+
+        #che-do-3 {
+            background:
+                linear-gradient(rgba(209, 203, 169, 0.348), rgba(209, 203, 169, .94)),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgm4IKKHnU51ZEzr1xES6H8GIge422xbbvAW2i0TaRQ&s=10") center / cover no-repeat;
+        }
+
+        #che-do-3 .mode-detail__float {
+            float: none;
+            display: block;
+            width: min(100%, 650px);
+            margin: 0 0 24px;
+            border: 1px solid rgba(242, 169, 0, .42);
+        }
+
+        #che-do-3 .mode-detail__prose p {
+            margin: 0 0 12px;
+            padding: 14px 18px;
+            background: rgba(31, 38, 43, 0.513);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--accent);
+            border-radius: 6px;
+            color: var(--text);
+        }
+
+        #che-do-3 .mode-detail__prose p:last-child {
+            margin-bottom: 0;
+        }
+
+        #che-do-3 .rule-list__item {
+            border-left: 3px solid var(--accent);
+        }
+
+        #che-do-3 .rule-list__name {
+            color: var(--accent);
+        }
+
         .table-hint {
             margin: 14px 0 0;
             font-size: .88rem;
@@ -218,6 +334,16 @@
         @media (max-width: 768px) {
             .page-head {
                 padding: 140px 0 56px;
+            }
+
+            .mode-preview-list {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin-top: 28px;
+            }
+
+            .mode-preview {
+                aspect-ratio: 16 / 7;
             }
 
             .mode-detail__grid {
@@ -272,9 +398,26 @@
                 <h1 class="page-head__title">Ba chế độ, ba phong cách chiến đấu</h1>
                 <p class="page-head__text">
                     Delta Force không chỉ là một chế độ bắn súng. Mỗi chế độ dưới đây đòi hỏi
-                    những kỹ năng chiến thuật khác nhau: chiến tranh quy mô lớn, trận chiến
-                    cưỡng vớt và chiến dịch hợp tác.
+                    những kỹ năng chiến thuật khác nhau:Chiến Trường (Warfare) trận chiến
+                    Chiến Dịch / Rút Quân và chiến dịch hợp tác.
                 </p>
+                <div class="mode-preview-list" aria-label="Ba chế độ chơi">
+                    <a class="mode-preview" href="#che-do-1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2y2XJZydOtmNic2TaSaP4p1itox_jA6w7r7aMvCX65g&s=10"
+                            alt="Chiến Trường, chế độ chiến tranh Chiến Trường (Warfare)">
+                        <span>01 / Chiến Trường</span>
+                    </a>
+                    <a class="mode-preview" href="#che-do-2">
+                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcmk2YBr9Mj4fnCFESWTHvldIb_iPuURoNT3Kge-NQYUNufLeQctr-cW_ZLlkYSR8Y3OXQrzH97VyNTmi-RawlAP2VRXXvxHGEkHVpOV9oqKmuyXFDHQa7hUyaQWHP01qPAqVAvpA?key=NprUMrcyKej3EbdQtYNoLQ"
+                            alt="Chiến Dịch / Rút Quân">
+                        <span>02 / Chiến Dịch / Rút Quân</span>
+                    </a>
+                    <a class="mode-preview" href="#che-do-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgm4IKKHnU51ZEzr1xES6H8GIge422xbbvAW2i0TaRQ&s=10"
+                            alt="Black Hawk Down, chiến dịch hợp tác">
+                        <span>03 / Black Hawk Down</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -282,8 +425,8 @@
         <nav class="jump-nav" aria-label="Điều hướng nhanh">
             <div class="container">
                 <ul class="jump-nav__list">
-                    <li><a class="jump-nav__link" href="#che-do-1">Quy mô lớn</a></li>
-                    <li><a class="jump-nav__link" href="#che-do-2">Cưỡng vớt</a></li>
+                    <li><a class="jump-nav__link" href="#che-do-1">Chiến Trường (Warfare)</a></li>
+                    <li><a class="jump-nav__link" href="#che-do-2">Chiến Dịch / Rút Quân</a></li>
                     <li><a class="jump-nav__link" href="#che-do-3">Black Hawk Down</a></li>
                     <li><a class="jump-nav__link" href="#bang-so-sanh">Bảng so sánh</a></li>
                 </ul>
@@ -296,14 +439,14 @@
             <div class="container">
                 <header class="section-head">
                     <p class="section-head__script">Chế độ 01</p>
-                    <h2 class="section-head__title">Chiến tranh quy mô lớn</h2>
+                    <h2 class="section-head__title">Chiến Trường (Warfare)</h2>
                 </header>
 
                 <div class="mode-detail__grid">
                     <!-- Y3: float + clearfix (ảnh chạy bên cạnh văn bản) -->
                     <div class="mode-detail__prose">
                         <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315467/EA57E9C06701A7EF053900324DBE820E4A8C7F16/"
-                            alt="Ảnh minh họa chế độ chiến tranh quy mô lớn" width="900" height="600">
+                            alt="Ảnh minh họa chế độ chiến tranh Chiến Trường (Warfare)" width="900" height="600">
                         <p>
                             Đây là chế độ dài nhất và cũng là điểm nhấn của Delta Force hiện nay.
                             Hai đội đối đầu trên bản đồ trải rộng, gồm cả không gian đất, biển
@@ -318,7 +461,7 @@
                         <p>
                             Chế độ này rất hợp với người chơi thích tranh chiến, muốn làm đội trưởng,
                             xây dựng đội hình và trích danh. Người chơi thích chật, đánh bạn
-                            đông đều thường chọn <strong>Cưỡng vớt</strong> ở phía dưới.
+                            đông đều thường chọn <strong>Chiến Dịch / Rút Quân</strong> ở phía dưới.
                         </p>
                     </div>
 
@@ -356,15 +499,15 @@
             <div class="container">
                 <header class="section-head">
                     <p class="section-head__script">Chế độ 02</p>
-                    <h2 class="section-head__title">Cưỡng vớt</h2>
+                    <h2 class="section-head__title">Chiến Dịch / Rút Quân</h2>
                 </header>
 
                 <div class="mode-detail__grid">
                     <div class="mode-detail__prose">
                         <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315459/F6B24A06DF701DD4F19282E71B63676A1080CA75/"
-                            alt="Ảnh minh họa chế độ cưỡng vớt" width="900" height="600">
+                            alt="Ảnh minh họa chế độ Chiến Dịch / Rút Quân" width="900" height="600">
                         <p>
-                            <strong>Cưỡng vớt</strong> là chế độ mang thiết bị vào bản đồ, tìm cửa,
+                            <strong>Chiến Dịch / Rút Quân</strong> là chế độ mang thiết bị vào bản đồ, tìm cửa,
                             gom <strong>chiến lợi phẩm</strong> rồi <strong>rút ra an toàn</strong>.
                             Nếu thua, mất hết trang bị hoặc chết, bạn mất hết phần thưởng
                             thuộc về cuộc trận.
@@ -420,7 +563,7 @@
                 <div class="mode-detail__grid">
                     <div class="mode-detail__prose">
                         <img class="mode-detail__float" src="https://images.steamusercontent.com/ugc/54703244189315483/44840183FD8B1D09D56E779687129DBF3821C746/"
-                            alt="Ảnh minh họa chiến dịch Black Hawk Down" width="900" height="600">
+                            alt="Ảnh minh họa chiến dịch Black Hawk Down">
                         <p>
                             Black Hawk Down là phần <strong>chiến dịch hợp tác</strong> cho tối
                             đa <strong>4 người chơi</strong>, remake lại từ game cùng tên
@@ -492,14 +635,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Chiến tranh quy mô lớn</td>
+                                <td>Chiến tranh Chiến Trường (Warfare)</td>
                                 <td>PvP liên đội</td>
                                 <td>32 vs 32</td>
                                 <td>Chiếm và giữ mục tiêu</td>
                                 <td>Thích chiến trận, đội hình, phương tiện</td>
                             </tr>
                             <tr>
-                                <td>Cưỡng vớt</td>
+                                <td>Chiến Dịch / Rút Quân</td>
                                 <td>PvPvE rút lui</td>
                                 <td>Tiểu đội 3 người</td>
                                 <td>Thu thập chiến lợi phẩm và rút an toàn</td>
