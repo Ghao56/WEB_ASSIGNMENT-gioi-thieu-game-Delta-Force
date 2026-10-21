@@ -34,8 +34,8 @@
     --line: rgba(232, 236, 239, .14);
     --line-light: #b3baae;
 
-    /* Font: Rajdhani (tiêu đề, giao diện) + Barlow (nội dung) + Black Ops One (stencil) */
-    --font-head: "Rajdhani", "Segoe UI", Arial, sans-serif;
+    /* Font: Oswald (tiêu đề, giao diện, hỗ trợ đầy đủ tiếng Việt) + Barlow (nội dung) + Black Ops One (stencil) */
+    --font-head: "Oswald", "Segoe UI", Arial, sans-serif;
     --font-body: "Barlow", "Segoe UI", Arial, sans-serif;
     --font-stencil: "Black Ops One", Impact, "Arial Black", sans-serif;
 
